@@ -1,6 +1,8 @@
+@import url(contact.css);
+
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
-
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 
 
 *,
@@ -38,11 +40,72 @@ body {
 .main-nav {
   height: 100px;
   width: 100%;
+  background: rgba(0,0,0,0.6);
 
 }
 
 
 .outer-nav {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin: 0;
+  height: 100%;
+}
+.outer-nav * {
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  float: right;
+}
+.outer-nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.2em;
+  overflow: hidden;
+  padding: 35px 0;
+
+
+}
+.outer-nav a {
+  padding: 0 0.2em 0 0.5em;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.outer-nav a:before,
+.outer-nav a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.outer-nav a:before {
+  left: 100%;
+  display: block;
+  width: 3px;
+  height: 100%;
+  content: "";
+  background-color: #AD0008;
+}
+.outer-nav a:after {
+  padding: 0 0.2em 0 0.5em;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+.outer-nav li:hover a,
+.outer-nav .current a {
+  transform: translateX(-100%);
+}
+
+/*.outer-nav {
   width: 100%;
   height: 100%;
   font-family: 'Roboto', Arial, sans-serif;
@@ -54,8 +117,8 @@ body {
   margin: 0;
   padding: 0 20px 0 0;
   letter-spacing: 2px;
-  /*background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, transparent 100%);*/
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, transparent 100%);
   background: rgba(0,0,0,0.6);
 } 
 
@@ -76,9 +139,9 @@ body {
 .outer-nav > li {
   border-left: 1px solid #ffffff;
   border-right: 1px solid #b3b3b3;
-}
+}*/
 
-.outer-nav > li:first-of-type {
+/*.outer-nav > li:first-of-type {
   border-left: none;
 }
 
@@ -96,9 +159,9 @@ body {
 
 .outer-nav a:hover {
   color: #ffffff;
-}
+}*/
 
-.outer-nav > li:before,
+/*.outer-nav > li:before,
 .outer-nav > li:after {
   position: absolute;
   content: '';
@@ -135,9 +198,9 @@ body {
   background-color: #8e2a20;
   color: #ffffff;
   font-weight: 400;
-}
+}*/
 
-.outer-nav ul li {
+/*.outer-nav ul li {
   display: list-item;
   float: none;
   position: relative;
@@ -159,9 +222,9 @@ body {
 
 .outer-nav li:hover > ul {
   display: inherit;
-}
+}*/
 
-.outer-nav li > a:after {
+/*.outer-nav li > a:after {
   content: ' \f3d0';
   font-family: "Ionicons";
 }
@@ -180,9 +243,9 @@ body {
 
 .outer-nav ul li > a:after {
   content: ' \f3d1';
-}
+}*/
 
-.outer-nav > li:hover > a,
+/*.outer-nav > li:hover > a,
 .outer-nav > li.current > a {
   color: #fff;
 }
@@ -191,7 +254,7 @@ body {
 .outer-nav > li.current:before {
   bottom: 0;
   opacity: 1;
-}
+}*/
 
 .logo {
    display: flex;
@@ -280,6 +343,8 @@ body {
    background: rgba(0,0,0,0.6);
    transition: height 0.5s cubic-bezier(0, 0, 0.3, 1);
    z-index: 100;
+
+   font-size: 1em;
 }
 
 
