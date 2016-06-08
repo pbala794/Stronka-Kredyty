@@ -1,0 +1,164 @@
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+
+
+/*********
+   HEADER
+**********/
+
+.banner {
+   background: url(../images/kredyty.png) no-repeat;
+   background-size: contain;
+   background-position: center;
+   min-height: 500px;
+   /*width: 100%;*/
+   
+}
+
+.main-nav {
+   height: 80px;
+   background: rgba(255, 91, 71, .5);
+   margin: 0;
+   box-shadow: 0 4px 3px rgba(0,0,0, .4);
+   /*transition: height 0.5s cubic-bezier(0, 0, 0.3, 1);*/
+
+   .outer-nav {
+      list-style: none;
+      padding-right: 25px;
+      height: 100%;
+      margin-top: 0;
+      display: flex;
+      justify-content: flex-end;
+
+      a {
+      text-decoration: none;
+      color: #000;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+         li {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 15px 15px;
+            letter-spacing: .1em; 
+
+
+            &:hover {
+               background: #fff;  
+               cursor: pointer;  
+               color: darkblue;     
+            }
+         
+         }
+
+      }
+
+      .logo {
+         margin-right: auto;
+         width: 50px;
+
+         img {
+            width: 100%;
+            height: 80%;
+         }
+      }
+   }     
+}
+
+
+
+.main-nav,
+.main-content,
+.calc {
+   position: relative;
+
+}
+
+.inner-nav {
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background: tomato;
+   min-height: 50px;
+   padding: 10px 0;
+   margin: 0; 
+
+   li {
+      border-bottom: 1px dotted grey;
+   }          
+}
+
+
+.nav-fixed {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+   transition: height 0.5s cubic-bezier(0, 0, 0.3, 1);
+   z-index: 100;
+}
+
+
+
+
+
+/**************
+   MAIN CONTENT
+**************/
+
+.main-content {
+   min-height: 100vh;
+   background: lightgrey;
+   flex: 1;
+   width: 100%;
+   margin: 0 auto;
+} 
+
+
+
+/********
+   CALC
+*********/
+      
+.calc {
+   background: #81A7CC;
+   min-height: 100vh;
+   width: 100%;
+} 
+
+
+
+
+
+/********
+   FOOTER
+*********/
+
+footer {
+   background: grey;
+   min-height: 100px;
+   width: 100%;
+   margin: 0;
+   text-align: center;
+   font-size: 1.2em;
+   padding-top: 2em;
+
+}
