@@ -14,17 +14,18 @@
    <header>
       <nav class="main-nav">
          <ul class="outer-nav">
-             <li><a href="#" data-hover="O nas">O Nas</a></li>
-             <li><a href="#" data-hover="Kontakt">Kontakt</a></li>
+            <li><a href="index.html" data-hover="Oferta" class="current">Oferta</a></li>
+             <li><a href="about.html" data-hover="O nas">O Nas</a></li>
+             <li><a href="#" data-hover="Kontakt" class="current">Kontakt</a></li>
          </ul>   
       </nav>
 
       <div class="banner"></div>
    </header>
 
-   <section class="contact">
+   
       
-      <div id="form-main">
+<!--       <div id="form-main">
         <div id="form-div">
           <form class="form" id="form1">
             
@@ -42,12 +43,65 @@
             
             
             <div class="submit">
-              <input type="submit" value="SEND" id="button-blue"/>
+              <input type="submit" value="Wyślij" id="button-blue"/>
               <div class="ease"></div>
             </div>
           </form>
         </div>
+      </div> -->
+
+
+   <section class="contact">
+   <div class="wrapper">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="contact-info">
+            <ul class="list-unstyled">
+               <li>
+                  <h2><i class="icon ion-android-map"></i> Adres</h2>
+                  <p>Łomianki 20, Warszawa</p>
+               </li>
+               <li>
+                  <h2><i class="icon ion-android-call"></i> Telefon</h2>
+                  <p>+48 722 456 789</p>
+               </li>
+               <li>
+                  <h2><i class="icon ion-email"></i> E-MAIL</h2>
+                  <p><a href="mailto:info@myemail.com">info@email.com</a></p>
+               </li>
+            </ul>
+         </div>
       </div>
+      <div class="col-md-8 col-sm-8 col-xs-12">
+         <div class="contact-form">
+            <div class="alert"></div>
+            <form id="contact-form" action="#" method="post">
+               <div class="row">
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                     <label class="sr-only" for="name">Imię:</label> 
+                     <input type="text" id="name" name="name" placeholder="Imię *" required>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-6">
+                     <label class="sr-only" for="email">Email:</label>
+                     <input type="email" id="email" name="email" placeholder="Email *" required>   
+                  </div>
+               </div>
+               <div class="row text-right">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                     <label class="sr-only" for="message">Wiadomość:</label>
+                     <textarea id="message" name="message" placeholder="Wiadomość *" required></textarea>
+                     <button type="submit" class="btn" name="send">SEND</button>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+      </div>
+   
+   </div>   <!-- WRAPPER END -->
+
+
+
    </section>
 
    

@@ -4,15 +4,18 @@
 
 .contact {
    min-height: 100vh;
-   background: linear-gradient(from #fff, to lightgrey);
    flex: 1;
    width: 100%;
    margin: 0 auto;
+
+   .wrapper {
+   	width: 80%;
+   	margin: 0 auto;
+   }
 }
 
 
-
-#feedback-page{
+/*#feedback-page{
 	text-align:center;
 }
 
@@ -23,7 +26,7 @@
 }
 
 #form-div {
-	background-color:rgba(72,72,72,0.4);
+	background-color: rgba(43,171,235,.5);
 	padding-left:35px;
 	padding-right:35px;
 	padding-top:35px;
@@ -68,10 +71,10 @@
 .focused{
 	color:#30aed6;
 	border:#30aed6 solid 3px;
-}
+}*/
 
 /* Icons ---------------------------------- */
-#name{
+/*#name{
 	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
 	background-size: 30px 30px;
 	background-position: 11px 8px;
@@ -105,9 +108,9 @@
 	background-size: 30px 30px;
 	background-position: 11px 8px;
 	background-repeat: no-repeat;
-}
+}*/
 
-textarea {
+/*textarea {
     width: 100%;
     height: 150px;
     line-height: 150%;
@@ -130,6 +133,7 @@ input:focus, textarea:focus {
 	font-size:24px;
 	padding-top:22px;
 	padding-bottom:22px;
+	letter-spacing: 2px;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -171,4 +175,184 @@ input:focus, textarea:focus {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+}*/
+
+
+
+
+
+
+/*********************
+	CONTACT FORM VER_2
+*********************/
+
+
+/* CONTACT */
+
+.list-unstyled {
+	list-style-type: none;
+	padding-left: 0;
+
+	p, a {
+		color: #585859;
+	}
+
+}
+
+
+.contact-info li {
+  padding-bottom: 20px;
+}
+
+.contact-info h2 {
+	font-size: 16px;
+	letter-spacing: 0.2em;
+}
+
+.contact-info h2, .contact-info p {
+  padding-left: 0px;
+}
+
+.contact-info p {
+  font-size: 12px;
+}
+
+.contact-info i {
+  font-size: 20px;
+  color: #333;
+}
+
+
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #777;
+  padding: 10px 20px;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out 0.1s;
+  -moz-transition: all 0.3s ease-in-out 0.1s;
+  -o-transition: all 0.3s ease-in-out 0.1s;
+  -ms-transition: all 0.3s ease-in-out 0.1s;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid #777;
+  padding: 14px;
+  min-height: 150px;
+  margin: 50px 0 20px 0;
+  -webkit-transition: all 0.3s ease-in-out 0.1s;
+  -moz-transition: all 0.3s ease-in-out 0.1s;
+  -o-transition: all 0.3s ease-in-out 0.1s;
+  -ms-transition: all 0.3s ease-in-out 0.1s;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid #000;
+}
+
+
+.btn {
+	border-radius: 0;
+	border: 0;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0px 70px;
+	margin: 30px;
+	overflow: hidden;
+	z-index: 1;
+	line-height: 50px;
+	position: relative;
+	background: #00E6FF;
+    color: #333;
+}
+
+.btn::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500%;
+	height: 1000%;
+	background: rgba(255,255,255,0.3);
+	z-index: -1;
+	transform-origin: 0% 0%;
+	transform: translateX(calc(20% - 20px)) translateY(10%) rotate(-45deg);
+	transition: transform 0.3s;
+}
+
+.btn:hover::after {
+  transform: translateY(10%) translateX(-20px) rotate(-45deg);
+}
+
+.btn:hover {
+  background-color: #00E6FF;
+  color: #777;
+}
+
+.btn:focus, .btn:active {
+  background-color: #00E6FF;
+  color: #777;
+  outline: none;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .contact-info {
+    text-align: center;
+  }
+  .contact-info li {
+    display: inline-block;
+    padding: 0 5px 10px 5px;
+  }
+  .contact-info i {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .contact-info h3, .contact-info p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact {
+    padding-bottom: 0;
+  }
+  .contact-info li {
+    display: block;
+  }
+}
+
+.contact-form {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 0;
+}
+
+.contact-form .alert,
+.contact-form label {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form .btn-primary {
+    width: 100%;
+  }
 }
