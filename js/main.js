@@ -27,9 +27,12 @@
 
 		   if (scrollTop > stickyNavTop) { 
 		      $('.main-nav').addClass('nav-fixed');
+		      $('.main-nav').removeClass('main-nav');
 		   } else {
+		   	  $('.nav-fixed').addClass('main-nav');
 		      $('.main-nav').removeClass('nav-fixed');
-		      $('.main-nav').addClass('.nav-default');
+
+
 		    }
    		};
 
@@ -38,7 +41,8 @@
 	   $(window).scroll(function() {
 	      stickyNav();
 	   });
-   });
+
+   	});
 
 
 

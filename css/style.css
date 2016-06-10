@@ -32,11 +32,19 @@ body {
   margin: 0;
   padding: 0; }
 
+/************
+   NAVIGATION
+**************/
 .main-nav {
   height: 100px;
   width: 100%;
   /*background: rgba(0,0,0,0.7);*/
-  background: rgba(0, 80, 98, 0.9); }
+  background: rgba(0, 80, 98, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100px;
+  transition: height 0.5s cubic-bezier(0, 0, 0.3, 1); }
 
 .outer-nav {
   font-family: 'Raleway', Arial, sans-serif;
@@ -119,10 +127,6 @@ body {
   font-size: 1em; }
   .nav-fixed li {
     padding: 20px 0; }
-
-.nav-default {
-  height: 100px;
-  transition: height 0.5s cubic-bezier(0, 0, 0.3, 1); }
 
 /**************
    MAIN CONTENT
@@ -306,10 +310,13 @@ figure.snip1477.hover figcaption {
    CALC
 *********/
 .calc {
-  background: #fff;
+  background: tomato;
   min-height: 50vh;
   width: 100%;
   padding-top: 80px; }
+  .calc #slider-1 {
+    width: 50%;
+    margin: 0 auto; }
 
 /********
    FOOTER
