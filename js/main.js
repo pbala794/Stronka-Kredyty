@@ -18,7 +18,7 @@
 
 
 	$(document).ready(function() {
-		console.log('husdhusd');
+		
 
 	   var stickyNavTop = $('.main-nav').offset().top;
 
@@ -27,9 +27,9 @@
 
 		   if (scrollTop > stickyNavTop) { 
 		      $('.main-nav').addClass('nav-fixed');
-		      console.log('sticky1');
 		   } else {
 		      $('.main-nav').removeClass('nav-fixed');
+		      $('.main-nav').addClass('.nav-default');
 		    }
    		};
 
@@ -37,7 +37,6 @@
 
 	   $(window).scroll(function() {
 	      stickyNav();
-	      console.log('sticky');
 	   });
    });
 

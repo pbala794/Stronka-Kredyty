@@ -8,11 +8,14 @@
 
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/jquery-ui.min.css">
    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
    <header>
       <nav class="main-nav">
+         <h1 class="logo"><a href="#">Logo</a></h1>
          <ul class="outer-nav">
             <li><a href="index.html" data-hover="Oferta" class="current">Oferta</a></li>
              <li><a href="about.html" data-hover="O nas">O Nas</a></li>
@@ -92,19 +95,61 @@
       </section>
 
       <section class="calc">
+         <!--Clculator widget-->
+      <div class="main-block-small ">
+         <h3 class="headline">Oblicz ratę kredytu</h3>
+         <span class="line" style="margin-bottom:20px;"></span>
+         <div class="clearfix"></div>
 
+         <div class="loan-calc">
+            <div class="message"><span>Kwota pożyczki</span></div>
+            <div id="amount-slider"></div><span class="desc">zł</span>
+            <div id="amount"></div>
+            <div class="ruler-marks"><span class="rm-left">1000</span><span class="rm-right">300 000 zł</span></div>
+            <div class="clearfix"></div>
+            <div class="message"><span>Oprocentowanie</span></div>
+            <div id="interest-slider"></div><span class="desc">%</span>
+            <div id="interest"></div>
+            <div class="ruler-marks"><span class="rm-left">1</span><span class="rm-right">20 %</span></div>
+            <div class="clearfix"></div>
+            <div class="message"><span>Okres kredytowania</span></div>
+            <div id="time-slider"></div><span class="desc">lat</span>
+            <div id="time"></div> 
+            <div class="ruler-marks"><span class="rm-left">1</span><span class="rm-right">30 lat</span></div>
+            <div class="clearfix"></div>
+            <div class="message total">
+               <span>Miesięczna rata:</span><span class="desc">zł</span><div id="result"> </div>
+            </div>                
+            <div class="clearfix"></div>
+            <!--<p class="debug"></p>-->
+         </div>
+      </div>
       </section>
 
   
    
 
    <footer>
-      Piotr Bała &copy; 2016.
+      <div class="info">
+         <h3>Kontakt</h3>
+         <ul>
+            <li>ul. Parkowa 17, 28-362 Nagłowice</li>
+            <li>513 221 152</li>
+            <li>email@info.com</li>
+         </ul>
+      </div>
+
+      <div class="bottom-footer">
+        Piotr Bała &copy; 2016. 
+      </div>
+      
    </footer>
 
    </div>   <!-- CONTAINER END -->
 
    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+   <script src="js/jquery-ui.min.js"></script>
+   <script src="js/loan.js"></script>
    <script src="js/main.js"></script>
 </body>
 </html>

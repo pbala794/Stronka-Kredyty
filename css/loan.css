@@ -1,0 +1,131 @@
+/* main loan slider
+====================================*/
+#amount-slider, #interest-slider, #time-slider
+{
+   width:77%;    
+   display:inline-block;
+}
+.loan-calc .message
+{
+    color: #8F8F8F;
+    font-size: 15px;
+}
+.loan-calc .desc
+{
+    display: inline-block;
+    width: 20px;
+    margin-left: 8px;
+    text-align: left;
+    float: right;
+    color: #aaa;
+    font-size: 13px;
+}
+#amount, #interest, #time, #result
+{
+    display:inline-block;
+    width: 65px;
+    float: right;
+    text-align:right;
+    padding: 1px 5px;
+    background-color: #fafafa;
+    box-shadow: inset 2px 2px 3px rgba(0,0,0,0.07);
+    color: #333;
+    font-weight: bold;
+}
+.ruler-marks
+{
+    width: 77%;
+    margin-top: -5px;
+    color: #bbb;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+.ruler-marks .rm-right
+{
+    float:right;
+}
+
+.loan-calc .total
+{
+    width: 230px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    float: right;
+}
+.loan-calc #result
+{
+    background-color: #fff;
+    box-shadow: none;
+    padding: 0;
+    font-size:18px;
+}
+.loan-calc .total .desc
+{
+    font-size:18px;
+}
+/* side loan slider
+====================================*/
+.loan-calc2 #amount-slider, .loan-calc2 #interest-slider, .loan-calc2 #time-slider
+{
+   width:68%;    
+   display:inline-block;
+}
+.loan-calc2 .message
+{
+    color: #8F8F8F;
+    font-size: 13px;
+}
+.loan-calc2 .desc
+{
+    display: inline-block;
+    width: 18px;
+    margin-left: 6px;
+    text-align: left;
+    float: right;
+    color: #aaa;
+    font-size: 13px;
+}
+.loan-calc2 #amount, .loan-calc2 #interest, .loan-calc2 #time, .loan-calc2 #result
+{
+    display:inline-block;
+    width: 45px;
+    float: right;
+    text-align:right;
+    padding: 1px 5px;
+    background-color: #fafafa;
+    box-shadow: inset 2px 2px 3px rgba(0,0,0,0.07);
+    color: #333;
+    font-weight: bold;
+    font-size: 12px;
+}
+.loan-calc2 .ruler-marks
+{
+    width: 68%;
+    margin-top: -5px;
+    color: #bbb;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+.loan-calc2 .ruler-marks .rm-right
+{
+    float:right;
+}
+
+.loan-calc2 .total
+{
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 6px;
+}
+.loan-calc2 #result
+{
+    background-color: #fff;
+    box-shadow: none;
+    padding: 0;
+    font-size:15px;
+}
+.loan-calc2 .total .desc
+{
+    font-size:16px;
+}
