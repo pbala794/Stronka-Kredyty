@@ -3,6 +3,7 @@
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&subset=latin-ext);
 *,
 *::after,
 *::before {
@@ -21,10 +22,10 @@ body {
    HEADER
 **********/
 .banner {
-  background: url(../images/kredyty.png) no-repeat;
-  background-size: contain;
-  background-position: center;
-  min-height: 500px;
+  background: url(../images/bank.jpg) no-repeat;
+  background-size: cover;
+  background-position: center top 40%;
+  min-height: 100vh;
   width: 100%; }
 
 .container {
@@ -41,6 +42,7 @@ body {
   /*background: rgba(0,0,0,0.7);*/
   background: rgba(0, 80, 98, 0.9);
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   height: 100px;
@@ -128,17 +130,37 @@ body {
   .nav-fixed li {
     padding: 20px 0; }
 
+/****************
+   INNER NAVIGATION ON HOVER
+******************/
+.inner-nav {
+  position: absolute;
+  list-style-type: none;
+  right: 18%; }
+  .inner-nav li {
+    display: block;
+    color: #fff; }
+  .inner-nav a {
+    text-decoration: none; }
+
 /**************
    MAIN CONTENT
 **************/
 .main-content {
   min-height: 40vh;
   background: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
   flex: 1;
   width: 100%;
   margin: 0 auto; }
-  .main-content .top-heading {
+  .main-content .main-text {
     width: 100%; }
+  .main-content .left-text,
+  .main-content .middle-text,
+  .main-content .right-text {
+    padding: 50px;
+    line-height: 1.7em;
+    letter-spacing: 2px; }
 
 /************
    OFFER TILE
@@ -147,20 +169,15 @@ body {
   height: 45vh;
   width: 100%;
   margin: 0;
-  padding: 0 0 80px;
-  /*  .credit {
-        background: lightgreen;
-     }
-     .loan {
-        background: skyblue;
-     }
-     .insurance {
-        background: tomato;
-     }*/ }
+  padding: 0 0 80px; }
   .offer .credit img,
   .offer .loan img,
   .offer .insurance img {
     height: 100%; }
+  .offer .credit {
+    padding-left: 0; }
+  .offer .loan {
+    padding-right: 0; }
 
 /***********************
    OFFER IMAGE HOVER EFFECT
@@ -170,7 +187,7 @@ figure.snip1477 {
   position: relative;
   float: left;
   overflow: hidden;
-  margin: 0 1%;
+  margin: 0;
   /*  min-width: 230px;
     max-width: 315px;*/
   width: 100%;
@@ -310,7 +327,7 @@ figure.snip1477.hover figcaption {
    CALC
 *********/
 .calc {
-  background: tomato;
+  background: #fff;
   min-height: 50vh;
   width: 100%;
   padding-top: 80px; }
