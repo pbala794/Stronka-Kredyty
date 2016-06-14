@@ -26,9 +26,11 @@
 		   var scrollTop = $(window).scrollTop();
 
 		   if (scrollTop > stickyNavTop) { 
+			  $('.top-menu').css('display', 'none');
 		      $('.main-nav').addClass('nav-fixed');
 		      $('.main-nav').removeClass('main-nav');
 		   } else {
+			  $('.top-menu').css('display', 'flex');
 		   	  $('.nav-fixed').addClass('main-nav');
 		      $('.main-nav').removeClass('nav-fixed');
 

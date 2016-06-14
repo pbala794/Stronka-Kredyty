@@ -11,6 +11,7 @@
         var mapOptions = {
             center: pos,
             zoom: 15,
+            scrollwheel: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 

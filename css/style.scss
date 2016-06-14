@@ -46,6 +46,68 @@ body {
 }
 
 
+
+/*****************
+   SCROLL DOWN ARROW
+******************/
+
+html body [data-ca3_iconfont="ETmodules"]::before {
+    font-family: "ETmodules";
+}  
+[data-ca3_icon]::before {
+    font-weight: normal;
+    content: attr(data-ca3_icon);
+}
+
+.ca3-scroll-down-arrow {
+   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=);
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+
+.ca3-scroll-down-link {
+  cursor:pointer;
+   height: 60px;
+   width: 80px;
+   margin: 0px 0 0 -40px;
+   line-height: 60px;
+   position: absolute;
+   left: 50%;
+   bottom: 0px;
+   color: #FFF;
+   text-align: center;
+   font-size: 70px;
+   z-index: 100;
+   text-decoration: none;
+   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+
+   -webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
+   -moz-animation:    ca3_fade_move_down 2s ease-in-out infinite;
+   animation:         ca3_fade_move_down 2s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes ca3_fade_move_down {
+  0%   { -webkit-transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,20px); opacity: 0; }
+}
+@-moz-keyframes ca3_fade_move_down {
+  0%   { -moz-transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,20px); opacity: 0; }
+}
+@keyframes ca3_fade_move_down {
+  0%   { transform:translate(0,-20px); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,20px); opacity: 0; }
+}
+
+
+
+
+
 /************
    NAVIGATION
 **************/
@@ -55,7 +117,7 @@ body {
    height: 100px;
    width: 100%;
    /*background: rgba(0,0,0,0.7);*/
-   background: rgba(0,80,98,.9);
+   background: rgba(0,80,98,.1);
    position: fixed;
    z-index: 100;
    top: 0;
@@ -63,6 +125,50 @@ body {
    height: 100px;
    transition: height 0.5s cubic-bezier(0, 0, 0.3, 1);
 
+   /***SOCIAL LINKS****/
+
+   .top-menu {
+      min-height: 25px;
+      color: #000;
+      background: #fff;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 18px;
+      border-bottom: 1px solid #fff;
+
+      i {
+         padding: 15px 15px 5px;
+         
+         &:not(:last-child) {
+            border-right: 1px dotted #525252;
+         }
+
+         &:first-child {
+            margin-left: 100px;
+         }
+
+         &:last-child {
+            margin-right: auto;
+         }
+      }
+   }
+
+
+   .icon-facebook-squared:hover {
+      background: #3B5998;
+      color: #fff;
+   }
+
+   .icon-twitter:hover {
+      background: #4099FF;
+      color: #fff;
+   }  
+       
+   .icon-mobile:hover {
+      background: #5986E4;
+      color: #fff;
+   }
 }
 
 
@@ -75,6 +181,8 @@ body {
   margin: 0;
   height: 100%;
   float: right;
+  display: flex;
+  align-items: center;
 }
 .outer-nav * {
   -webkit-transition: all 0.35s ease;
@@ -86,7 +194,7 @@ body {
   list-style: outside none none;
   margin: 0 1.2em;
   overflow: hidden;
-  padding: 35px 0;
+  padding: 10px 0;
 
 
 }
@@ -137,6 +245,12 @@ body {
    color: #fff;
    text-transform: uppercase;
    margin-left: 5%;
+   padding: 5px;
+
+}
+
+
+.nav-light {
 
 }
 
@@ -148,9 +262,7 @@ body {
    width: 100%;
    height: 70px;
    padding-left: 0;
-   /*background-image: rgba(0,0,0,.9);*/
-   /*background: rgba(0,0,0,0.7);*/
-   background: rgba(0,80,98,.9);
+   background: rgba(0,80,98,.8);
    transition: height 0.5s cubic-bezier(0, 0, 0.3, 1);
    z-index: 100;
    font-size: 1em;
@@ -158,6 +270,7 @@ body {
    li {
       padding: 20px 0;
    }
+
 }
 
 
@@ -224,6 +337,7 @@ body {
    width: 100%;
    margin: 0;
    padding: 0 0 80px; 
+
 
    .credit img,
    .loan img,
