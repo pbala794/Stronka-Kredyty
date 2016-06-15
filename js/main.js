@@ -44,9 +44,26 @@
 	      stickyNav();
 	   });
 
+
+
+
+
+
 	});
 
 
 })();
 
 
+
+	var range = document.getElementById('g-range-value');
+
+	function showRangeValue(rangeValue) {
+		range.innerHTML = rangeValue;
+	}
+
+
+	$(function(){
+		// Trigger maximage
+		jQuery('#maximage').maximage();
+	});
