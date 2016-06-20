@@ -8,17 +8,33 @@
 
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/fontello.css">
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
    <header>
       <nav class="main-nav">
-         <h1 class="logo"><a href="index.html">Logo</a></h1>
-         <ul class="outer-nav">
-            <li><a href="index.html" data-hover="Oferta">Oferta</a></li>
-             <li><a href="about.html" data-hover="O nas">O Nas</a></li>
-             <li><a href="#" data-hover="Kontakt" class="current">Kontakt</a></li>
-         </ul>   
+         <div class="top-menu">
+            <i class="icon-facebook-squared"></i>
+            <i class="icon-twitter"></i>
+            <i class="icon-mobile">(41) 500 300 222</i>
+         </div>
+
+         <div class="down-menu">
+            <h1 class="logo"><a href="index.html">Logo</a></h1>
+            <ul class="outer-nav">
+               <li><a href="index.html" data-hover="Oferta">Oferta</a>
+   <!--                <ul class="inner-nav">
+                     <li>Kredyty</li>
+                     <li>Ubezpieczenia</li>
+                     <li>Pożyczki</li>
+                  </ul> -->
+               </li>
+                <li><a href="about.html" data-hover="O nas">O Nas</a></li>
+                <li><a href="contact.html" data-hover="Kontakt" class="current">Kontakt</a></li>
+            </ul> 
+         </div>  
       </nav>
 
 
@@ -28,74 +44,91 @@
       </div> -->
    </header>
    
-   <div id="content">
+
+   <div class="bg-stripe">
+      <h2>Masz jakieś pytania? Zostaw wiadomość, oddzwonimy do Ciebie</h2>
+   </div> 
+
+   <!-- <div id="content"> -->
 
    <section class="contact">
-   <div class="wrapper">
-    <div class="row">
-      <div class="col-md-4 col-sm-4 col-xs-12">
-         <div class="contact-info">
-            <ul class="list-unstyled">
-               <li>
-                  <h2><i class="icon ion-android-map"></i> Adres</h2>
-                  <p>Łomianki 20, Warszawa</p>
-               </li>
-               <li>
-                  <h2><i class="icon ion-android-call"></i> Telefon</h2>
-                  <p>+48 722 456 789</p>
-               </li>
-               <li>
-                  <h2><i class="icon ion-email"></i> E-MAIL</h2>
-                  <p><a href="mailto:info@myemail.com">info@email.com</a></p>
-               </li>
-            </ul>
+           
+      <div class="wrapper">
+       <div class="row">
+         <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="contact-info">
+               <ul class="list-unstyled">
+                  <li>
+                     <h2><i class="icon ion-android-map"></i> Adres</h2>
+                     <p>Łomianki 20, Warszawa</p>
+                  </li>
+                  <li>
+                     <h2><i class="icon ion-android-call"></i> Telefon</h2>
+                     <p>+48 722 456 789</p>
+                  </li>
+                  <li>
+                     <h2><i class="icon ion-email"></i> E-MAIL</h2>
+                     <p><a href="mailto:info@myemail.com">info@email.com</a></p>
+                  </li>
+               </ul>
+            </div>
          </div>
-      </div>
-      <div class="col-md-8 col-sm-8 col-xs-12">
-         <div class="contact-form">
-            <div class="alert"></div>
-            <form id="contact-form" action="#" method="post">
-               <div class="row">
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                     <label class="sr-only" for="name">Imię:</label> 
-                     <input type="text" id="name" name="name" placeholder="Imię *" required>
+         <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="contact-form">
+               <div class="alert"></div>
+               <form id="contact-form" action="#" method="post">
+                  <div class="row">
+                     <div class="col-md-6 col-sm-6 col-xs-6">
+                        <label class="sr-only" for="name">Imię:</label> 
+                        <input type="text" id="name" name="name" placeholder="Imię *" required>
+                     </div>
+                     <div class="col-md-6 col-sm-6 col-xs-6">
+                        <label class="sr-only" for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Email *" required>   
+                     </div>
                   </div>
-                  <div class="col-md-6 col-sm-6 col-xs-6">
-                     <label class="sr-only" for="email">Email:</label>
-                     <input type="email" id="email" name="email" placeholder="Email *" required>   
+                  <div class="row text-right">
+                     <div class="col-md-12 col-sm-12 col-xs-12">
+                        <label class="sr-only" for="message">Wiadomość:</label>
+                        <textarea id="message" name="message" placeholder="Wiadomość *" required></textarea>
+                        <button type="submit" class="btn" name="send">Wyślij</button>
+                     </div>
                   </div>
-               </div>
-               <div class="row text-right">
-                  <div class="col-md-12 col-sm-12 col-xs-12">
-                     <label class="sr-only" for="message">Wiadomość:</label>
-                     <textarea id="message" name="message" placeholder="Wiadomość *" required></textarea>
-                     <button type="submit" class="btn" name="send">Wyślij</button>
-                  </div>
-               </div>
-            </form>
+               </form>
+            </div>
          </div>
-      </div>
-      </div>
+         </div>
 
 
-   
-   </div>   <!-- WRAPPER END -->
+      
+      </div>   <!-- WRAPPER END -->
 
 
 
    </section>
 
    
-   </div>   <!-- CONTENT END -->
+   <!-- </div> -->   <!-- CONTENT END -->
 
    <footer>
       <div class="info">
-         <h3>Kontakt</h3>
-         <ul>
-            <li>ul. Parkowa 17, 28-362 Nagłowice</li>
-            <li>513 221 152</li>
-            <li>email@info.com</li>
-         </ul>
+         <div class="info-left">
+            <h3>Skontaktuj się z nami</h3>
+            <ul>
+               <li>ul. Parkowa 17, 28-362 Nagłowice</li>
+               <li>513 221 152</li>
+               <li>email@info.com</li>
+            </ul>
+         </div>
+
+         <div class="info-middle">
+            
+         </div>
+
+         <div class="info-right">
+            <h3>Soner</h3>
+            <p><a href="#">Polityka prywatności</a></p>
+         </div>
       </div>
 
       <div class="bottom-footer">

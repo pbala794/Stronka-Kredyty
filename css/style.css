@@ -1,5 +1,4 @@
 @import url(loan.css);
-@import url(contact.css);
 @import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
@@ -31,8 +30,9 @@ body {
   /* background: url(../images/bank.jpg) no-repeat;
    background-size: cover;
    background-position: center top 40%;*/
-  min-height: 100vh;
-  width: 100%; }
+  min-height: 70vh;
+  width: 100%;
+  position: relative; }
 
 .container {
   width: 100%;
@@ -98,68 +98,90 @@ body {
 .no-cssanimations .cb-slideshow li span {
   opacity: 1; }
 
-/*****************
-   SCROLL DOWN ARROW
-******************/
-/*html body [data-ca3_iconfont="ETmodules"]::before {
-    font-family: "ETmodules";
-} */
-[data-ca3_icon]::before {
-  font-weight: normal;
-  content: attr(data-ca3_icon); }
-
-.ca3-scroll-down-arrow {
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2hldnJvbl90aGluX2Rvd24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiBmaWxsPSJ3aGl0ZSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTE3LjQxOCw2LjEwOWMwLjI3Mi0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwYzAuMjcsMC4yNjgsMC4yNzEsMC43MDEsMCwwLjk2OWwtNy45MDgsNy44M2MtMC4yNywwLjI2OC0wLjcwNywwLjI2OC0wLjk3OSwwbC03LjkwOC03LjgzYy0wLjI3LTAuMjY4LTAuMjctMC43MDEsMC0wLjk2OWMwLjI3MS0wLjI2OCwwLjcwOS0wLjI2OCwwLjk3OSwwTDEwLDEzLjI1TDE3LjQxOCw2LjEwOXoiLz48L3N2Zz4=);
-  background-size: contain;
-  background-repeat: no-repeat; }
-
-.ca3-scroll-down-link {
-  cursor: pointer;
-  height: 60px;
-  width: 80px;
-  margin: 0px 0 0 -40px;
-  line-height: 60px;
+/*******************
+    SLIDE DOWN ARROW 
+********************/
+.arrow-wrap {
   position: absolute;
+  z-index: 1;
   left: 50%;
-  bottom: 0px;
-  color: #222;
-  text-align: center;
-  font-size: 70px;
-  z-index: 100;
-  text-decoration: none;
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
-  -webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
-  -moz-animation: ca3_fade_move_down 2s ease-in-out infinite;
-  animation: ca3_fade_move_down 2s ease-in-out infinite; }
+  bottom: 0;
+  margin-left: -5em;
+  background: #111;
+  width: 10em;
+  height: 10em;
+  padding: 4em 2em;
+  border-radius: 50%;
+  font-size: 0.5em;
+  display: block;
+  box-shadow: 0px 0px 5px 0px #333; }
 
-/*animated scroll arrow animation*/
-@-webkit-keyframes ca3_fade_move_down {
+.arrow {
+  float: left;
+  position: relative;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 3em 3em 0 3em;
+  border-color: #ffffff transparent transparent transparent;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg); }
+
+.arrow:after {
+  content: '';
+  position: absolute;
+  top: -3.2em;
+  left: -3em;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 3em 3em 0 3em;
+  border-color: #111 transparent transparent transparent;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg); }
+
+/*.hint {
+  position:absolute;
+  top:0.6em;
+  width:100%;
+  left:0;
+  font-size:2em;
+  font-style:italic;
+  text-align:center;
+  color:#fff;
+  opacity:0;
+}*/
+.arrow-wrap:hover .hint {
+  opacity: 1; }
+
+@-webkit-keyframes arrows {
   0% {
-    -webkit-transform: translate(0, -20px);
-    opacity: 0; }
+    top: 0; }
+  10% {
+    top: 12%; }
+  20% {
+    top: 0; }
+  30% {
+    top: 12%; }
+  40% {
+    top: -12%; }
   50% {
-    opacity: 1; }
+    top: 12%; }
+  60% {
+    top: 0; }
+  70% {
+    top: 12%; }
+  80% {
+    top: -12%; }
+  90% {
+    top: 12%; }
   100% {
-    -webkit-transform: translate(0, 20px);
-    opacity: 0; } }
-@-moz-keyframes ca3_fade_move_down {
-  0% {
-    -moz-transform: translate(0, -20px);
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    -moz-transform: translate(0, 20px);
-    opacity: 0; } }
-@keyframes ca3_fade_move_down {
-  0% {
-    transform: translate(0, -20px);
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  100% {
-    transform: translate(0, 20px);
-    opacity: 0; } }
+    top: 0; } }
+.arrow-wrap .arrow {
+  -webkit-animation: arrows 2.8s 0.4s infinite;
+  /*  -webkit-animation-delay: 3s;*/
+  animation: arrows 2.8s 0.4s infinite; }
+
 /************
    NAVIGATION
 **************/
@@ -167,7 +189,7 @@ body {
   height: 100px;
   width: 100%;
   /*background: rgba(0,0,0,0.7);*/
-  background: rgba(34, 34, 34, 0.1);
+  background: rgba(34, 34, 34, 0.7);
   position: fixed;
   z-index: 100;
   top: 0;
@@ -185,13 +207,15 @@ body {
     font-size: 1.2em;
     border-bottom: 1px solid #fff; }
     .main-nav .top-menu i {
-      padding: 15px 15px 5px; }
+      padding: 10px 15px 5px; }
       .main-nav .top-menu i:not(:last-child) {
         border-right: 1px dotted #525252; }
       .main-nav .top-menu i:first-child {
         margin-left: 100px; }
       .main-nav .top-menu i:last-child {
         margin-right: auto; }
+      .main-nav .top-menu i:hover {
+        cursor: pointer; }
   .main-nav .down-menu {
     height: 60%; }
   .main-nav .icon-facebook-squared:hover {
@@ -273,6 +297,9 @@ body {
   margin-left: 5%;
   padding-bottom: 10px; }
 
+.about {
+  background: rgba(34, 34, 34, 0.9); }
+
 .nav-fixed {
   position: fixed;
   top: 0;
@@ -324,19 +351,34 @@ body {
    OFFER TILE
 *************/
 .offer {
-  height: 45vh;
+  height: 50vh;
   width: 100%;
   margin: 0;
-  padding: 0 0 120px;
+  padding: 0 0 10%;
   background: #fff; }
-  .offer .credit img,
-  .offer .loan img,
-  .offer .insurance img {
+  .offer .credit,
+  .offer .loan,
+  .offer .insurance,
+  .offer .property {
+    padding: 0;
     height: 100%; }
-  .offer .credit {
-    padding-left: 0; }
-  .offer .loan {
-    padding-right: 0; }
+    .offer .credit figure,
+    .offer .loan figure,
+    .offer .insurance figure,
+    .offer .property figure {
+      height: 100%; }
+    .offer .credit img,
+    .offer .loan img,
+    .offer .insurance img,
+    .offer .property img {
+      height: 100%;
+      padding: 0; }
+
+.images-row {
+  width: 100%;
+  height: 80%;
+  margin: 0;
+  padding: 0; }
 
 /***********************
    OFFER IMAGE HOVER EFFECT
@@ -432,8 +474,8 @@ figure.snip1477 h4 {
 
 figure.snip1477 figcaption {
   position: absolute;
-  bottom: 42%;
-  left: 25px;
+  bottom: 8%;
+  left: 5%;
   text-align: left;
   opacity: 0;
   padding: 5px 60px 5px 10px;
@@ -482,10 +524,25 @@ figure.snip1477.hover figcaption {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s; }
 
-.bg {
-  background: transparent;
-  min-height: 50vh;
-  width: 100%; }
+.logo-carousel {
+  background: rgba(34, 34, 34, 0.9);
+  min-height: 35vh;
+  width: 100%;
+  display: flex;
+  align-items: center; }
+  .logo-carousel .logo-wrapper {
+    background: transparent;
+    height: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+    align-items: center;
+    position: relative; }
+    .logo-carousel .logo-wrapper img {
+      height: 60%;
+      width: 15%;
+      padding: 0 10px;
+      margin: 0 40px; }
 
 /********
    CALC
@@ -511,7 +568,7 @@ figure.snip1477.hover figcaption {
 #g-range-container {
   width: 370px;
   border-radius: 10px;
-  margin: 200px auto 0 auto;
+  margin: 50px auto 0;
   height: 10px;
   padding-top: 6px;
   border: 1px solid #CECECE; }
@@ -559,20 +616,30 @@ footer {
   font-size: 1em;
   color: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-items: flex-end; }
+  flex-direction: column; }
   footer .info {
-    margin: 0 auto 0 100px;
+    /*margin: 0 auto 0 100px;*/
     display: flex;
-    flex-direction: column; }
+    text-align: left;
+    justify-content: flex-start; }
+  footer .info-left,
+  footer .info-right {
+    padding: 0 5%; }
   footer ul {
-    list-style-type: none; }
+    list-style-type: none;
+    padding: 0; }
     footer ul li {
-      padding: 5px; }
+      padding: 5px 0; }
   footer .bottom-footer {
-    background: rgba(34, 34, 34, 0.8);
+    background: #222222;
     width: 100%;
     padding: 1em; }
+
+/***************
+   MEDIA QUERIES
+****************/
+@media screen and (max-width: 1024px) {
+  .offer {
+    padding: 0 0 20%; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+.main-nav {
+  background: rgba(34, 34, 34, 0.9); }
+
 .contact {
   min-height: 100vh;
   flex: 1;
@@ -9,10 +12,28 @@
     width: 80%;
     margin: 0 auto; }
 
+.bg-stripe {
+  width: 100%;
+  min-height: 30vh;
+  background: #c2b699;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  display: flex; }
+  .bg-stripe h2 {
+    letter-spacing: 3px;
+    margin: auto;
+    color: #5d5d5d;
+    font-size: 2em; }
+
 /*********************
 	CONTACT FORM
 *********************/
 /* CONTACT */
+.wrapper {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  padding: 50px;
+  background: #fafafa; }
+
 .row {
   margin-bottom: 0; }
 
@@ -118,9 +139,9 @@ textarea:focus {
 ***************/
 #map {
   width: 100%;
-  height: 35vh;
-  background: #ccc;
-  margin: 0 auto; }
+  height: 45vh;
+  background: #c2b699;
+  margin: 100px 0 0; }
 
 /***************
 	MEDIA QUERIES

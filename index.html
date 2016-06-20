@@ -12,6 +12,7 @@
    <link rel="stylesheet" href="css/jquery-ui.min.css">
    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
    <link rel="stylesheet" href="css/jquery.maximage.min.css">
+   <link rel="stylesheet" href="css/owl.carousel.css">
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -42,13 +43,15 @@
 
       <div class="banner">
          <div id="maximage">
-            <img src="images/p1.jpg" alt="" width="100%" height="100%" />
-            <img src="images/p7.jpg" alt="" width="100%" height="100%" />
-            <img src="images/p11.jpg" alt="" width="100%" height="100%" />
+            <img src="images/p9_filter.jpg" alt="" width="100%" height="100%" />
+            <img src="images/p7_filter.jpg" alt="" width="100%" height="100%" />
+            <img src="images/p11_filter.jpg" alt="" width="100%" height="100%" />
 
          </div>        
 
-        <a class="ca3-scroll-down-link ca3-scroll-down-arrow" data-ca3_iconfont="ETmodules" data-ca3_icon=""></a>
+         <a class="arrow-wrap" id="btn-scroll" href="#offer-tiles">
+            <span class="arrow"></span>
+         </a>
       </div>
    </header>
 
@@ -72,10 +75,11 @@
 
       <section>
 
-         <div class="row offer">
-            <div class="col-md-4 credit">
+         <div class="row offer" id="offer-tiles">
+         <div class="images-row">
+            <div class="col-sm-6 col-md-3 credit">
                <figure class="snip1477">
-                 <img src="images/tile-kredyt.png" alt="kredyt" />
+                 <img src="images/p2-thumbnail.jpg" alt="kredyt" />
                  <div class="title">
                    <div>
                      <h2>Kredyty</h2>
@@ -89,9 +93,9 @@
                </figure> 
             </div>
 
-            <div class="col-md-4 insurance">
+            <div class="col-md-3 col-sm-6 insurance">
                <figure class="snip1477">
-                  <img src="images/tile-ubezpieczenie.jpg" alt="ubezpieczenia" />
+                  <img src="images/p4-thumbnail.jpg" alt="ubezpieczenia" />
                  <div class="title">
                    <div>
                      <h2>Ubezpieczenia</h2>
@@ -105,9 +109,9 @@
                </figure> 
             </div>
 
-            <div class="col-md-4 loan">
+            <div class="col-md-3 col-sm-6 loan">
                <figure class="snip1477">
-                  <img src="images/tile-pozyczka.jpg" alt="pozyczka" />
+                  <img src="images/p13-thumbnail.jpg" alt="pozyczka" />
                  <div class="title">
                    <div>
                      <h2>Pożyczki</h2>
@@ -120,20 +124,75 @@
                  <a href="oferta/pozyczki.html"></a>
                </figure>   
             </div>
+
+            <div class="col-md-3 col-sm-6 property">
+               <figure class="snip1477">
+                  <img src="images/p14-thumbnail.jpg" alt="nieruchomości" />
+                 <div class="title">
+                   <div>
+                     <h2>Nieruchomości</h2>
+                     <h4>Nutrisha</h4>
+                   </div>
+                 </div>
+                 <figcaption>
+                   <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+                 </figcaption>
+                 <a href="oferta/ubezpieczenia.html"></a>
+               </figure> 
+            </div>
+         </div>   <!-- IMAGES ROW END -->
          </div>  <!--  OFFER END -->
 
-         <div class="bg"></div>
+         <div class="logo-carousel">
+            <div class="logo-wrapper">
+               <div class="owl-carousel">
+                  <div class="item" style="width:800px"><img src="images/loga/logo1.png" alt=""></div>
+                  <div class="item" style="width:800px"><img src="images/loga/logo2.png" alt=""></div>
+                  <div class="item" style="width:800px"><img src="images/loga/logo3.png" alt=""></div>
+                  <div class="item" style="width:800px"><img src="images/loga/logo4.png" alt=""></div>
+                  <div class="item" style="width:800px"><img src="images/loga/logo5.png" alt=""></div>
+                  <div class="item" style="width:800px"><img src="images/loga/logo6.png" alt=""></div>
+                  <div class="item" style="width:800px"><img src="images/loga/logo7.png" alt=""></div>
+               </div>
+            </div>
+            
+         </div>
          
       </section>
 
       <section class="calc">
          
-         <div id="g-range-container" class="bg-gray">
-            <input class="g-range" type="range" id="g-range" min="100" max="1500" step="5" onchange="showRangeValue(this.value)" oninput="showRangeValue(this.value)">
+         <div class="amount">
+            <div id="g-range-container" class="bg-gray">
+               <input class="g-range" type="range" name="money" id="cash" min="1000" max="100000" step="500" >
+            </div>
+            <div id="g-range-values-container" class="">
+               <p class="txt-big-number txt-gray" id="g-range-value">1000</p>
+            </div>
          </div>
-         <div id="g-range-values-container" class="">
-            <p class="txt-big-number txt-gray" id="g-range-value">1000</p>
+         
+         <div class="period">
+            <div id="g-range-container" class="bg-gray">
+               <input class="g-range" type="range" id="months" min="12" max="36" step="1" ">
+            </div>
+            <div id="g-range-values-container" class="">
+               <p class="txt-big-number txt-gray" id="g-range-value">24 miesiące</p>
+            </div>
          </div>
+
+         <div class="lending-rate">
+            <div id="g-range-container" class="bg-gray">
+               <input class="g-range" type="range" id="percent" min="0.5" max="15" step="0.5" >
+            </div>
+            <div id="g-range-values-container" class="">
+               <p class="txt-big-number txt-gray" id="g-range-value">4%</p>
+            </div>
+         </div>
+
+         <div class="rate" id="pay">
+            <input type='text' name='rate' value='' />
+         </div>
+
 
 
       </section>
@@ -143,12 +202,23 @@
 
    <footer>
       <div class="info">
-         <h3>Kontakt</h3>
-         <ul>
-            <li>ul. Parkowa 17, 28-362 Nagłowice</li>
-            <li>513 221 152</li>
-            <li>email@info.com</li>
-         </ul>
+         <div class="info-left">
+            <h3>Skontaktuj się z nami</h3>
+            <ul>
+               <li>ul. Parkowa 17, 28-362 Nagłowice</li>
+               <li>513 221 152</li>
+               <li>email@info.com</li>
+            </ul>
+         </div>
+
+         <div class="info-middle">
+            
+         </div>
+
+         <div class="info-right">
+            <h3>Soner</h3>
+            <p><a href="#">Polityka prywatności</a></p>
+         </div>
       </div>
 
       <div class="bottom-footer">
@@ -163,6 +233,7 @@
    <script src="js/jquery-ui.min.js"></script>
    <script src="js/jquery.cycle.all.min.js"></script>
    <script src="js/jquery.maximage.min.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
    <script src="js/loan.js"></script>
    <script src="js/main.js"></script>
 </body>
