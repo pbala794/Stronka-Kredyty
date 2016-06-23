@@ -10,10 +10,13 @@
    <link rel="stylesheet" href="../css/bootstrap.min.css">
    <link rel="stylesheet" href="../css/jquery-ui.min.css">
    <link rel="stylesheet" href="../css/jquery-ui.theme.min.css">
+   <!-- <link rel="stylesheet" href="../css/css_clock.css"> -->
+   
    <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/jClocksGMT.css">
 
 </head>
-<body>
+<body class="animate-in">
    <header>
       <nav class="main-nav">
          <h1 class="logo"><a href="../index.html">Logo</a></h1>
@@ -21,6 +24,7 @@
             <li><a href="../index.html" data-hover="Oferta" class="current">Oferta</a></li>
              <li><a href="../about.html" data-hover="O nas">O Nas</a></li>
              <li><a href="../contact.html" data-hover="Kontakt">Kontakt</a></li>
+             <li><a href="blog.html" data-hover="Blog">Blog</a></li>
          </ul>   
       </nav>
 
@@ -29,22 +33,38 @@
 
     
    <div class="container" id="content">
-      <section class="main-content">
 
+      <section class="main-content">
+      </section>
+
+      <section class="clocks">
         
+        <div id="clock_hou"></div>
 
       </section>
-  
+
+
    </div>   <!-- CONTAINER END -->
 
-   <footer>
+  <footer>
       <div class="info">
-         <h3>Kontakt</h3>
-         <ul>
-            <li>ul. Parkowa 17, 28-362 Nagłowice</li>
-            <li>513 221 152</li>
-            <li>email@info.com</li>
-         </ul>
+         <div class="info-left">
+            <h3>Skontaktuj się z nami</h3>
+            <ul>
+               <li>ul. Parkowa 17, 28-362 Nagłowice</li>
+               <li>513 221 152</li>
+               <li>email@info.com</li>
+            </ul>
+         </div>
+
+         <div class="info-middle">
+            
+         </div>
+
+         <div class="info-right">
+            <h3>Soner</h3>
+            <p><a href="#">Polityka prywatności</a></p>
+         </div>
       </div>
 
       <div class="bottom-footer">
@@ -57,6 +77,10 @@
 
    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
    <script src="../js/jquery-ui.min.js"></script>
+   <!-- <script src="../js/script_clock.js"></script> -->
+   <script src="../js/jquery.rotate.js"></script>
+   <script src="../js/jClocksGMT.js"></script> 
+   <script src="../js/clock_script.js"></script>
    <script src="../js/main.js"></script>
 </body>
 </html>

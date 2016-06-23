@@ -59,6 +59,16 @@
 
 
 
+	   // PAGE TRANSITIONS
+
+	   window.addEventListener("beforeunload", function () {
+		  document.body.classList.add("animate-out");
+		});
+
+
+
+
+
 	   // OWL CAROUSEL
 
 	    var owl = $('.owl-carousel');
@@ -81,6 +91,12 @@
 		});
 
 	});
+
+
+
+	// JQUERY CALC PLUGIN
+
+	$(".calculator").accrue();
 
 
 })();
