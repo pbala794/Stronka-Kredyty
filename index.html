@@ -13,6 +13,8 @@
    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
    <link rel="stylesheet" href="css/jquery.maximage.min.css">
    <link rel="stylesheet" href="css/owl.carousel.css">
+   <link rel="stylesheet" href="css/slick.css">
+   <link rel="stylesheet" href="css/slick-theme.css">
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -30,7 +32,12 @@
                   </ul> -->
                </li>
                 <li><a href="about.html" data-hover="O nas">O Nas</a></li>
-                <li><a href="contact.html" data-hover="Kontakt">Kontakt</a></li>
+                <li class="menu-contact">
+                  <a href="#contact-info" data-hover="Kontakt" id="show-contact-info">Kontakt</a>
+                  <div class="contact-panel" id="contact-info">
+                     
+                  </div>
+                </li>
                 <li><a href="blog.html" data-hover="Blog">Blog</a></li>
             </ul> 
   
@@ -159,6 +166,20 @@
          
       </section>
 
+      <section class="promo">
+         <h2>Lorem ipsum dolor sit amet.</h2>
+
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt architecto alias veniam hic dolor voluptate.</p>
+         
+         <div class="promo-slides">
+            <figure>
+              <img class='photo'  src="images/p11_filter.jpg" alt="" />
+              <img class='photo'  src="images/p12_filter.jpg" alt="" />
+              <img class='photo'  src="images/p1.jpg" alt="" />
+            </figure>
+         </div>
+      </section>
+
       <section class="calc">
 
          <div class="calculator"></div>
@@ -205,6 +226,10 @@
       <div class="info">
          <div class="info-left">
             <h3>Skontaktuj się z nami</h3>
+            <div class="open-hours">
+               <div class="dot open"></div>
+               <p></p>
+            </div>
             <ul>
                <li>ul. Parkowa 17, 28-362 Nagłowice</li>
                <li>513 221 152</li>
@@ -212,9 +237,9 @@
             </ul>
          </div>
 
-         <div class="info-middle">
-            
-         </div>
+<!--          <div class="info-middle">
+
+         </div> -->
 
          <div class="info-right">
             <h3>Soner</h3>
@@ -237,6 +262,7 @@
    <script src="js/owl.carousel.min.js"></script>
    <script src="js/loan.js"></script>
    <script src="js/jquery.accrue.min.js"></script>
+   <script src="js/slick.min.js"></script>
    <script src="js/main.js"></script>
 </body>
 </html>

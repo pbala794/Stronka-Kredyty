@@ -1,22 +1,5 @@
 (function() {
 
-
-	// console.log('test');
-
-	// var nav = $('.main-nav');
-
-	// $(window).scroll(function() {
-	// 	if ($(this).scrollTop() > 60) {
-	// 		nav.addClass("nav-fixed");
-	// 		// $('.nav-fixed').animate({
-	// 		// 	opacity: 
-	// 		// })
-	// 	} else {
-	// 		nav.removeClass("nav-fixed");
-	// 	}
-	// });
-
-
 // STICKY NAVIGATION
 
 	$(document).ready(function() {
@@ -28,11 +11,11 @@
 		   var scrollTop = $(window).scrollTop();
 
 		   if (scrollTop > stickyNavTop) { 
-			  $('.top-menu').css('display', 'none');
+
 		      $('.main-nav').addClass('nav-fixed');
 		      $('.main-nav').removeClass('main-nav');
 		   } else {
-			  $('.top-menu').css('display', 'flex');
+
 		   	  $('.nav-fixed').addClass('main-nav');
 		      $('.main-nav').removeClass('nav-fixed');
 
@@ -58,6 +41,27 @@
 
 
 
+		// SLIDE DOWN CONTACT PANEL
+
+
+		$('#show-contact-info').on('click', function() {
+			console.log('contact');
+
+			if ($('#contact-info').hasClass('contact-panel')) {
+				console.log('ma klase');
+				$('#contact-info').addClass('contact-panel-active');
+			} 
+			else if ($('#contact-info').hasClass('contact-panel-active')) {
+				
+				$('#contact-info').removeClass('contact-panel-active');
+				console.log('nie ma klasy');
+
+			}
+			
+		});
+
+
+
 
 	   // PAGE TRANSITIONS
 
@@ -71,7 +75,9 @@
 
 	   // OWL CAROUSEL
 
-	    var owl = $('.owl-carousel');
+	    var owl = $('.owl-carousel'),
+	    	owlPromo = $('#owl-slider');
+
 
 		owl.owlCarousel({
 		    items:4,
@@ -90,7 +96,43 @@
 		    }
 		});
 
-	});
+
+
+		// SLICK SLIDER
+
+
+		  $('.slick-slider').slick({
+		  	adaptiveHeight: true,
+		  	autoplay: true,
+		  	arrows: true
+		  });
+
+
+
+
+
+		// Open hour dot script
+
+		var date = new Date(),
+		open = date.getHours();
+
+
+		if (open < 8 || open > 17) {
+		    console.log("close time");
+		    $('.open-hours .dot').addClass('close');
+		    $('.open-hours p').html('<p>Teraz nieczynne</p>');
+		} else {
+			$('.open-hours .dot').removeClass('close');
+			 $('.open-hours p').html('<p>Teraz czynne</p>');
+		}
+
+
+
+
+
+
+
+	});		// $READY END
 
 
 
@@ -107,8 +149,6 @@
 		// Trigger maximage
 		jQuery('#maximage').maximage();
 	});
-
-
 
 
 

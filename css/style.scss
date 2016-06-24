@@ -23,6 +23,7 @@ body {
    display: flex;
    flex-direction: column;
 
+
    ul {
       list-style-type: none;
    }
@@ -387,8 +388,30 @@ body {
 }
 
 
+/*****************
+  DROPDOWN CONTACT
+*****************/
+
+.menu-contact {
+  position: static;
+}
 
 
+.contact-panel {
+  display: none;
+  min-height: 150px;
+  background: #dbdbdb;
+  width: 100vw;
+  overflow-x: hidden;
+  position: absolute;
+  top: 100px;
+  left: 0;
+
+}
+
+.contact-panel-active {
+  display: block;
+}
 
 
 
@@ -438,13 +461,14 @@ body {
    .insurance,
    .property {
       padding: 0 15px 0;  
-      height: 100%;
+      height: 80%;
 
       figure {
          height: 100%;
       } 
       
       img {
+      width: 100%;
       height: 100%;
       padding: 0;
       }
@@ -505,6 +529,7 @@ figure.snip1477 img {
   opacity: 0.9;
 }
 figure.snip1477 .title {
+  font-weight: bold;
   position: absolute;
   top: 9%;
   left: 4%;
@@ -619,6 +644,13 @@ figure.snip1477.hover figcaption {
 }
 
 
+
+
+/**************
+  LOGO CAROUSEL
+***************/
+
+
 .logo-carousel {
    background: rgba(34,34,34,.9);
    min-height: 35vh;
@@ -643,6 +675,98 @@ figure.snip1477.hover figcaption {
          margin: 0 40px;
       }
    }
+}
+
+
+
+
+
+/***************
+   PROMO SECTION
+   CAROUSEL
+****************/
+
+
+/*how many images we have*/
+$slides: 3;
+
+/*how much we want each slide to show*/
+$time_per_slide: 9;
+
+/*total time needed for full animation*/
+$total_animation_time: $time_per_slide * $slides;
+
+
+.promo {
+  margin: 0;
+  padding-top: 10%; 
+  width:100%;
+  min-height: 80vh;
+  overflow-x: hidden;
+  position:relative;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+   h2 {
+      margin-top: 0;
+      line-height: 50px;
+   }
+
+.promo-slides {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  margin: 10% 0;
+
+  figure {
+    height: 100%;
+  }
+}
+
+}
+.photo{
+  position: absolute;
+  overflow-x: hidden;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  animation: round #{$total_animation_time}s infinite;
+  opacity:0;
+  
+}
+@keyframes round{   
+  5% {
+    left: 0;
+    opacity: 1;
+  }
+
+  25%{
+    opacity:1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity:0;
+  } 
+
+  50%{
+
+    left: 0;
+  }
+  100% {
+    opacity: 0;
+    left: 100%;
+  }
+} 
+
+@for $index from 1 to $slides + 1{
+  img:nth-child(#{$index}){
+    animation-delay:#{$total_animation_time - $time_per_slide * $index}s
+  }
 }
 
 
@@ -751,6 +875,10 @@ footer {
       padding: 0 5%;
    }
 
+   .info-left {
+    position: relative;
+   }
+
 
    ul {
       list-style-type: none;
@@ -761,6 +889,28 @@ footer {
       }
    }
 
+  .open-hours {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    .open {
+      width: 12px;
+      height: 12px;
+      background: green;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: inline-block;
+
+    }
+
+    .close {
+      background: red;
+    }
+
+    p {
+      display: inline-block;
+    }
+  }
 
    .bottom-footer {
       background: rgba(34,34,34,1);
