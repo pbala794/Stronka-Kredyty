@@ -392,25 +392,22 @@ body {
   DROPDOWN CONTACT
 *****************/
 
-.menu-contact {
-  position: static;
-}
-
 
 .contact-panel {
+  position: fixed;
+  z-index: 10;
   display: none;
-  min-height: 150px;
+  min-height: 300px;
   background: #dbdbdb;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
-  position: absolute;
   top: 100px;
   left: 0;
 
 }
 
 .contact-panel-active {
-  display: block;
+  display: flex;
 }
 
 
@@ -460,8 +457,9 @@ body {
    .loan,
    .insurance,
    .property {
-      padding: 0 15px 0;  
-      height: 80%;
+      padding: 0 18px 18px;  
+      height: 343px;
+      width: 315px;
 
       figure {
          height: 100%;
@@ -474,23 +472,30 @@ body {
       }
   }
 
+  .property {
+    width: 50%;
+  }
+
 } 
 
 .row {
    margin: 0;
 
-   .big-tile {
+/*   .big-tile {
       display: flex;
       justify-content: center;
       padding: 30px 15px;
-   }
+   }*/
 }
 
 .images-row {
-   width: 75%;
+   width: 80%;
    height: 344px;
    margin: 0 auto;
    padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 
 }
 
@@ -929,9 +934,9 @@ footer {
 ****************/
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-height: 800px) {
 
-   .offer {
+   .main-content {
       padding: 0 0 20%;
    }
 

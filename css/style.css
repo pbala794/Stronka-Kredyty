@@ -323,21 +323,19 @@ body {
 /*****************
   DROPDOWN CONTACT
 *****************/
-.menu-contact {
-  position: static; }
-
 .contact-panel {
+  position: fixed;
+  z-index: 10;
   display: none;
-  min-height: 150px;
+  min-height: 300px;
   background: #dbdbdb;
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
-  position: absolute;
   top: 100px;
   left: 0; }
 
 .contact-panel-active {
-  display: block; }
+  display: flex; }
 
 /**************
    MAIN CONTENT
@@ -372,8 +370,9 @@ body {
   .offer .loan,
   .offer .insurance,
   .offer .property {
-    padding: 0 15px 0;
-    height: 80%; }
+    padding: 0 18px 18px;
+    height: 343px;
+    width: 315px; }
     .offer .credit figure,
     .offer .loan figure,
     .offer .insurance figure,
@@ -386,19 +385,25 @@ body {
       width: 100%;
       height: 100%;
       padding: 0; }
+  .offer .property {
+    width: 50%; }
 
 .row {
-  margin: 0; }
-  .row .big-tile {
-    display: flex;
-    justify-content: center;
-    padding: 30px 15px; }
+  margin: 0;
+  /*   .big-tile {
+        display: flex;
+        justify-content: center;
+        padding: 30px 15px;
+     }*/ }
 
 .images-row {
-  width: 75%;
+  width: 80%;
   height: 344px;
   margin: 0 auto;
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 /***********************
    OFFER IMAGE HOVER EFFECT
@@ -742,8 +747,8 @@ footer {
 /***************
    MEDIA QUERIES
 ****************/
-@media screen and (max-width: 1024px) {
-  .offer {
+@media screen and (max-height: 800px) {
+  .main-content {
     padding: 0 0 20%; } }
 
 /*# sourceMappingURL=style.css.map */

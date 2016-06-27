@@ -14,6 +14,7 @@
    
    <link rel="stylesheet" href="../css/style.css">
    <link rel="stylesheet" href="../css/jClocksGMT.css">
+   <link rel="stylesheet" href="../css/kredyty.css">
 
 </head>
 <body class="animate-in">
@@ -28,23 +29,73 @@
          </ul>   
       </nav>
 
-      <div class="banner"></div>
+      <div class="banner" style="min-height: 250px;"></div>
    </header>
 
     
    <div class="container" id="content">
 
       <section class="main-content">
+         
+         <h2>Wybierz kredyt dopasowany do Ciebie</h2>
+         
+         <div class="credit-container">  
+            <!-- <div class="col-md-4"> -->
+               <figure class="snip1512">
+                 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample83.jpg" alt="sample83" />
+                 <figcaption>
+                   <h3>Kredyty gotówkowe</h3>
+                   <p>Lorem ipsum dolor sit amet.</p>
+                 </figcaption><i class="ion-plus"></i>
+                 <a href="#"></a>
+               </figure>
+          <!--   </div> -->
+
+           <!--  <div class="col-md-4"> -->
+               <figure class="snip1512"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample57.jpg" alt="sample57" />
+                 <figcaption>
+                   <h3>Kredyty dla Firm</h3>
+                   <p>Lorem ipsum dolor sit.</p>
+                 </figcaption><i class="ion-plus"></i>
+                 <a href="#"></a>
+               </figure>
+            <!-- </div> -->
+
+           <!--  <div class="col-md-4"> -->
+               <figure class="snip1512"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample38.jpg" alt="sample38" />
+                 <figcaption>
+                   <h3>Kredyty konsolidacyjne</h3>
+                   <p>Lorem ipsum dolor sit amet.</p>
+                 </figcaption><i class="ion-plus"></i>
+                 <a href="#"></a>
+               </figure> 
+            <!-- </div> -->
+         </div> 
+
+         <!-- AJAX -->
+
+         <div class="ajax-content" id="load-div">
+            
+         </div>
+
       </section>
 
+      
       <section class="clocks">
-        
-        <div id="clock_hou"></div>
-
+         <ul id="clock">   
+           <li id="sec"></li>
+           <li id="hour"></li>
+           <li id="min"></li>
+         </ul>
       </section>
+
 
 
    </div>   <!-- CONTAINER END -->
+
+
+
+
 
   <footer>
       <div class="info">
@@ -77,9 +128,9 @@
 
    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
    <script src="../js/jquery-ui.min.js"></script>
-   <!-- <script src="../js/script_clock.js"></script> -->
-   <script src="../js/jquery.rotate.js"></script>
-   <script src="../js/jClocksGMT.js"></script> 
+   <script src="../js/ajax.js"></script>
+   <script sec="../js/moment-timezone.js"></script>
+<!--    <script src="../js/moment-timezone-with-data-2010-2020.js"></script> -->
    <script src="../js/clock_script.js"></script>
    <script src="../js/main.js"></script>
 </body>

@@ -44,20 +44,18 @@
 		// SLIDE DOWN CONTACT PANEL
 
 
-		$('#show-contact-info').on('click', function() {
+		$('#show-contact-info').on('click', function(e) {
 			console.log('contact');
 
-			if ($('#contact-info').hasClass('contact-panel')) {
-				console.log('ma klase');
-				$('#contact-info').addClass('contact-panel-active');
-			} 
-			else if ($('#contact-info').hasClass('contact-panel-active')) {
-				
-				$('#contact-info').removeClass('contact-panel-active');
-				console.log('nie ma klasy');
+			e.preventDefault();
+		 
+			if ($('#contact-info').is(':visible')) { 
+		  		$('#contact-info').hide('slideDown');
 
-			}
-			
+			} else {
+			   $('#contact-info').show('slideDown');
+			} 
+		
 		});
 
 
