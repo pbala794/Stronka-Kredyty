@@ -15,6 +15,8 @@
    <link rel="stylesheet" href="css/owl.carousel.css">
    <link rel="stylesheet" href="css/slick.css">
    <link rel="stylesheet" href="css/slick-theme.css">
+   <link rel="stylesheet" href="css/ion.rangeSlider.css">
+   <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -40,8 +42,22 @@
   
       </nav>
 
-      <div class="contact-panel" id="contact-info">
-         <p></p>               
+      <div class="contact-panel row">
+         <div class="contact-info">
+            <p>tel. 801 800 800</p> 
+            <p>Jesteśmy do Twojej dyspozycji</p>
+            <p>pon. - sob.</p>
+            <p>w godzinach 9.00 - 17.00</p>
+         </div> 
+         <div class="contact-right">
+            <div class="open-hours">
+               <div class="dot open"></div>
+               <p></p>
+            </div> 
+            <div class="contact-us">   
+               <button type="button">Skontaktuj się</button>
+            </div> 
+         </div>          
       </div>
 
       <div class="banner">
@@ -186,42 +202,24 @@
 
       <section class="calc">
 
-         <!-- <div class="calculator"></div>
+         <h3>Kwota, którą pożyczasz</h3>
+
+         <input id="range-slider1" type="range" onchange="getVal(range1, input1)" />
+         <input type="text" name="slider-value" value="1000" id="input1">
+
+         <h3>Oprocentowanie</h3>
+         <input id="range-slider2" type="range" onchange="getVal(range2, input2)" />
+         <input type="text" name="slider-value" value="1000" id="input2">
          
-         <div class="amount">
-            <div id="g-range-container" class="bg-gray">
-               <input class="g-range" type="range" name="money" id="cash" min="1000" max="100000" step="500" >
-            </div>
-            <div id="g-range-values-container" class="">
-               <p class="txt-big-number txt-gray" id="g-range-value">1000</p>
-            </div>
-         </div>
-         
-         <div class="period">
-            <div id="g-range-container" class="bg-gray">
-               <input class="g-range" type="range" id="months" min="12" max="36" step="1" ">
-            </div>
-            <div id="g-range-values-container" class="">
-               <p class="txt-big-number txt-gray" id="g-range-value">24 miesiące</p>
-            </div>
-         </div>
+         <h3>Okres spłaty</h3>
+         <input id="range-slider3" type="range" onchange="getVal(range3, input3)" />
+         <input type="text" name="slider-value" value="1000" id="input3">
 
-         <div class="lending-rate">
-            <div id="g-range-container" class="bg-gray">
-               <input class="g-range" type="range" id="percent" min="0.5" max="15" step="0.5" >
-            </div>
-            <div id="g-range-values-container" class="">
-               <p class="txt-big-number txt-gray" id="g-range-value">4%</p>
-            </div>
-         </div>
+         <button type="button">Oblicz</button>
 
-         <div class="rate" id="pay">
-            <input type='text' name='rate' value='' />
-         </div>
+         <p>Twoja miesięczna rata: </p>
 
-
- -->
-
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non officiis dolorum excepturi hic quis voluptatibus neque cum reiciendis ut, autem in laudantium provident maxime assumenda illum, ratione porro eaque voluptatem esse est, earum. Repellendus necessitatibus consequuntur atque voluptas dolores odit explicabo sequi at distinctio. Neque?</p>
       </section>
 
   
@@ -268,6 +266,8 @@
    <script src="js/loan.js"></script>
    <script src="js/jquery.accrue.min.js"></script>
    <script src="js/slick.min.js"></script>
+   <script src="js/ion.rangeSlider.min.js"></script>
+
    <script src="js/main.js"></script>
 </body>
 </html>

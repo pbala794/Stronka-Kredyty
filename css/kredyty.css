@@ -1,6 +1,6 @@
 .main-content {
   max-width: 80vw;
-  min-height: 100vh;
+  min-height: 50vh;
   margin: 0 auto; }
   .main-content h2 {
     text-align: center;
@@ -139,42 +139,55 @@
 **************/
 .ajax-content {
   display: none;
-  width: 80%;
+  width: 75%;
   height: 500px;
-  background: #ffa;
-  margin: 0 auto; }
+  background: #fefefe;
+  margin: 0 auto;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15); }
 
 /**********
    CLOCKS
 ***********/
-#clock {
+.clocks {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(#fff 15%, #dbdbdb);
+  padding: 3% 0; }
+  .clocks h3 {
+    position: relative;
+    top: -60px;
+    left: 60px; }
+
+.clock {
+  background-image: url("http://demo.web3designs.com/images/clockBg.png");
+  height: 200px;
   position: relative;
-  width: 250px;
-  height: 250px;
-  margin: 20px auto 0 auto;
-  background: url(../images/clockface.jpg);
-  background-size: cover;
-  background-position: center;
-  list-style: none; }
+  width: 200px;
+  display: inline-flex;
+  bottom: 20px;
+  margin: 0 50px; }
 
-#sec, #min, #hour {
+.clock div {
   position: absolute;
-  width: 30px;
-  height: 250px;
-  top: 0px;
-  left: 285px; }
+  left: 50%; }
 
-#sec {
-  background: url(../images/sechand.png);
-  z-index: 3; }
+.clock img[src*="second"] {
+  transition: transform 600000s linear 0s; }
 
-#min {
-  background: url(../images/minhand.png);
-  z-index: 2; }
+.clock:target img[src*="second"] {
+  transform: rotate(3600000deg); }
 
-#hour {
-  background: url(../images/hourhand.png);
-  z-index: 1; }
+.clock img[src*="minute"] {
+  transition: transform 360000s linear 0s; }
+
+.clock:target img[src*="minute"] {
+  transform: rotate(36000deg); }
+
+.clock img[src*="hour"] {
+  transition: transform 216000s linear 0s; }
+
+.clock:target img[src*="hour"] {
+  transform: rotate(360deg); }
 
 /*************
    MEDIA QUERIES

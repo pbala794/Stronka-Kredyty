@@ -324,19 +324,83 @@ body {
   DROPDOWN CONTACT
 *****************/
 .contact-panel {
-  position: fixed;
-  z-index: 10;
   display: none;
-  min-height: 300px;
-  background: #dbdbdb;
+  height: 35vh;
   width: 100%;
-  overflow-x: hidden;
+  position: fixed;
   top: 100px;
-  left: 0; }
+  left: 0;
+  background: #fff;
+  z-index: 100;
+  box-shadow: 0 0px 25px #000; }
 
-.contact-panel-active {
-  display: flex; }
+.contact-info {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  padding-left: 10%; }
+  .contact-info p {
+    font-size: 2em;
+    margin: 0; }
+    .contact-info p:first-child {
+      font-size: 2.3em;
+      padding: 25px 0; }
 
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  justify-content: center; }
+  .contact-right .open-hours,
+  .contact-right .contact-us {
+    height: 100%; }
+    .contact-right .open-hours button,
+    .contact-right .contact-us button {
+      width: 200px;
+      height: 75px;
+      border-radius: 15px;
+      border: 3px solid tomato;
+      color: tomato;
+      background: #fff;
+      font-size: 1.5em; }
+      .contact-right .open-hours button:hover,
+      .contact-right .contact-us button:hover {
+        background: tomato;
+        color: #fff;
+        border: 3px solid #fff;
+        transition: all .5s ease-out; }
+  .contact-right .open-hours {
+    position: absolute;
+    top: 80px;
+    left: 50%; }
+    .contact-right .open-hours .open {
+      width: 12px;
+      height: 12px;
+      background: green;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: inline-block; }
+    .contact-right .open-hours p {
+      display: inline-block; }
+  .contact-right .close {
+    background: red; }
+  .contact-right button {
+    align-self: center; }
+
+/*.contact-panel-active {
+  position: fixed;
+  display: flex;
+  height: 300px;
+  background: #fafafa;
+  top: 100px;
+  left: 0;
+  transition: all .5s ease-out;
+}*/
 /**************
    MAIN CONTENT
 **************/
@@ -641,59 +705,19 @@ img:nth-child(3) {
 *********/
 .calc {
   background: #fff;
-  min-height: 50vh;
-  width: 100%;
-  padding-top: 80px; }
-  .calc #slider-1 {
-    width: 50%;
-    margin: 0 auto; }
-
-*:focus {
-  outline: 0; }
-
-.bg-gray {
-  background-color: #E5E5E5; }
-
-.txt-gray {
-  color: #808080; }
-
-#g-range-container {
-  width: 370px;
-  border-radius: 10px;
-  margin: 50px auto 0;
-  height: 10px;
-  padding-top: 6px;
-  border: 1px solid #CECECE; }
-
-#g-range-container .g-range {
-  width: 350px;
-  background-color: #72B2AA;
-  margin: 0 auto;
-  display: block;
-  border-radius: 10px; }
-
-#g-range-values-container {
-  width: 350px;
-  margin: 20px auto; }
-
-.txt-big-number {
-  text-align: center; }
-
-input[type="range"] {
-  -webkit-appearance: none;
-  background-color: black;
-  height: 4px; }
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  position: relative;
-  top: 0px;
-  z-index: 1;
-  width: 35px;
-  height: 35px;
-  border-radius: 40px;
-  background-color: #FFF;
-  border: 1px solid #CECECE; }
+  height: 100vh;
+  padding: 80px 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .calc input[type='text'] {
+    margin: 0 50px;
+    height: 50px; }
+  .calc button {
+    width: 200px;
+    height: 80px;
+    border-radius: 3px; }
 
 /********
    FOOTER
@@ -703,7 +727,7 @@ footer {
   background: rgba(34, 34, 34, 0.98);
   min-height: 200px;
   width: 100%;
-  margin: 0;
+  margin: 20px 0 0;
   text-align: center;
   font-size: 1em;
   color: #fff;

@@ -49,14 +49,15 @@
 
 			e.preventDefault();
 		 
-			if ($('#contact-info').is(':visible')) { 
-		  		$('#contact-info').hide('slideDown');
+			$('.contact-panel').slideToggle('ease-in', function() {
+				if ($(this).is(':visible'))
+        		$(this).css('display','flex');
+			});
+		}); 
 
-			} else {
-			   $('#contact-info').show('slideDown');
-			} 
-		
-		});
+
+
+
 
 
 
@@ -96,19 +97,6 @@
 
 
 
-		// SLICK SLIDER
-
-
-		  $('.slick-slider').slick({
-		  	adaptiveHeight: true,
-		  	autoplay: true,
-		  	arrows: true
-		  });
-
-
-
-
-
 		// Open hour dot script
 
 		var date = new Date(),
@@ -133,10 +121,6 @@
 	});		// $READY END
 
 
-
-	// JQUERY CALC PLUGIN
-
-	$(".calculator").accrue();
 
 
 })();
