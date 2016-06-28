@@ -279,8 +279,7 @@ body {
   transform: translateX(-100%); }
 
 .current {
-  /*color: #337ab7;*/
-  color: #08B2A9; }
+  transform: translateX(-100%); }
 
 .logo {
   display: inline-flex;
@@ -341,14 +340,16 @@ body {
   justify-content: center;
   width: 50%;
   height: 100%;
-  background: #fff;
-  padding-left: 10%; }
+  background: #8E4854;
+  padding-left: 8%;
+  color: #fff;
+  letter-spacing: 2px; }
   .contact-info p {
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 0; }
     .contact-info p:first-child {
-      font-size: 2.3em;
-      padding: 25px 0; }
+      font-size: 2.5em;
+      padding: 15px 0; }
 
 .contact-right {
   display: flex;
@@ -358,40 +359,47 @@ body {
   justify-content: center; }
   .contact-right .open-hours,
   .contact-right .contact-us {
-    height: 100%; }
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px; }
     .contact-right .open-hours button,
     .contact-right .contact-us button {
-      width: 200px;
-      height: 75px;
+      width: 250px;
+      height: 95px;
       border-radius: 15px;
-      border: 3px solid tomato;
-      color: tomato;
+      border: 3px solid #8E4854;
+      color: #8E4854;
       background: #fff;
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      letter-spacing: 2px; }
       .contact-right .open-hours button:hover,
       .contact-right .contact-us button:hover {
-        background: tomato;
+        background: #8E4854;
         color: #fff;
         border: 3px solid #fff;
-        transition: all .5s ease-out; }
+        transition: all .4s ease; }
   .contact-right .open-hours {
     position: absolute;
-    top: 80px;
-    left: 50%; }
+    top: 58px;
+    left: 35%; }
     .contact-right .open-hours .open {
       width: 12px;
       height: 12px;
       background: green;
       border: 1px solid #fff;
       border-radius: 50%;
-      display: inline-block; }
+      display: inline-block;
+      margin-right: 10px; }
     .contact-right .open-hours p {
-      display: inline-block; }
+      display: inline-block;
+      color: #fff;
+      letter-spacing: 1.5px; }
   .contact-right .close {
-    background: red; }
-  .contact-right button {
-    align-self: center; }
+    background: #FA042D; }
 
+/**** CONTACT RIGHT END ****/
 /*.contact-panel-active {
   position: fixed;
   display: flex;
@@ -732,7 +740,8 @@ footer {
   font-size: 1em;
   color: #fff;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  letter-spacing: 1.5px; }
   footer .info {
     /*margin: 0 auto 0 100px;*/
     display: flex;
@@ -751,7 +760,7 @@ footer {
   footer .open-hours {
     position: absolute;
     top: -10px;
-    right: 0px; }
+    right: -25px; }
     footer .open-hours .open {
       width: 12px;
       height: 12px;
@@ -760,7 +769,7 @@ footer {
       border-radius: 50%;
       display: inline-block; }
     footer .open-hours .close {
-      background: red; }
+      background: #FA042D; }
     footer .open-hours p {
       display: inline-block; }
   footer .bottom-footer {
@@ -774,5 +783,10 @@ footer {
 @media screen and (max-height: 800px) {
   .main-content {
     padding: 0 0 20%; } }
+@media screen and (min-width: 1440px) {
+  .contact-panel .open-hours {
+    position: absolute;
+    top: 60px;
+    left: 32%; } }
 
 /*# sourceMappingURL=style.css.map */

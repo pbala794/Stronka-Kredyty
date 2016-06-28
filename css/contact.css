@@ -43,20 +43,20 @@
   .list-unstyled p, .list-unstyled a {
     color: #585859; }
 
-.contact-info li {
+.contact-info-form li {
   padding-bottom: 10px; }
 
-.contact-info h2 {
+.contact-info-form h2 {
   font-size: 16px;
   letter-spacing: 0.2em; }
 
-.contact-info h2, .contact-info p {
+.contact-info-form h2, .contact-info-form p {
   padding-left: 0px; }
 
-.contact-info p {
+.contact-info-form p {
   font-size: 12px; }
 
-.contact-info i {
+.contact-info-form i {
   font-size: 20px;
   color: #333; }
 

@@ -14,11 +14,16 @@
 
 		      $('.main-nav').addClass('nav-fixed');
 		      $('.main-nav').removeClass('main-nav');
+		      $('.contact-panel').css('transform', 'translateY(-30px)');
+		      $('.contact-panel').css('transition', 'all .5s ease');
+
+
 		   } else {
 
 		   	  $('.nav-fixed').addClass('main-nav');
 		      $('.main-nav').removeClass('nav-fixed');
-
+		      $('.contact-panel').css('transform', 'translateY(0)');
+		      $('.contact-panel').css('transition', 'all .5s ease');
 
 		    }
    		};
@@ -103,7 +108,7 @@
 		open = date.getHours();
 
 
-		if (open < 8 || open > 17) {
+		if (open < 9 || open > 17) {
 		    console.log("close time");
 		    $('.open-hours .dot').addClass('close');
 		    $('.open-hours p').html('<p>Teraz nieczynne</p>');

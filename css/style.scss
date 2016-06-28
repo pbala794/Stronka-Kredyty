@@ -326,8 +326,7 @@ body {
 }
 
 .current {
-   /*color: #337ab7;*/
-   color: #08B2A9;
+   transform: translateX(-100%);
 }
 
 
@@ -414,17 +413,19 @@ body {
   justify-content: center;
   width: 50%;
   height: 100%;
-  background: #fff;
-  padding-left: 10%;
+  background: #8E4854;
+  padding-left: 8%;
+  color: #fff;
+  letter-spacing: 2px;
 
 
   p {
-    font-size: 2em;
+    font-size: 1.8em;
     margin: 0;
 
     &:first-child {
-      font-size: 2.3em;
-      padding: 25px 0;
+      font-size: 2.5em;
+      padding: 15px 0;
     }
   }
 }
@@ -439,21 +440,26 @@ body {
   .open-hours,
   .contact-us {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
 
     button {
-      width: 200px;
-      height: 75px;
+      width: 250px;
+      height: 95px;
       border-radius: 15px;
-      border: 3px solid tomato;
-      color: tomato;
+      border: 3px solid #8E4854;
+      color: #8E4854;
       background: #fff;
       font-size: 1.5em;
+      letter-spacing: 2px;
 
       &:hover {
-        background: tomato;
+        background: #8E4854;
         color: #fff;
         border: 3px solid #fff;
-        transition: all .5s ease-out;
+        transition: all .4s ease;
       }
     }
   }
@@ -461,8 +467,8 @@ body {
 
   .open-hours {
     position: absolute;
-    top: 80px;
-    left: 50%;
+    top: 58px;
+    left: 35%;
 
     .open {
       width: 12px;
@@ -471,21 +477,21 @@ body {
       border: 1px solid #fff;
       border-radius: 50%;
       display: inline-block;
+      margin-right: 10px;
     }
 
     p {
       display: inline-block;
+      color: #fff;
+      letter-spacing: 1.5px;
     }
   }
-    .close {
-      background: red;
-    }
 
-  button {
-    align-self: center; 
+  .close {
+      background: #FA042D;
   }
-}
 
+}   /**** CONTACT RIGHT END ****/
 
 
 
@@ -916,6 +922,7 @@ footer {
    color: #fff;
    display: flex;
    flex-direction: column;
+   letter-spacing: 1.5px;
 
 
    .info {
@@ -948,7 +955,7 @@ footer {
   .open-hours {
     position: absolute;
     top: -10px;
-    right: 0px;
+    right: -25px;
     .open {
       width: 12px;
       height: 12px;
@@ -960,7 +967,7 @@ footer {
     }
 
     .close {
-      background: red;
+      background: #FA042D;
     }
 
     p {
@@ -991,4 +998,16 @@ footer {
       padding: 0 0 20%;
    }
 
+}
+
+@media screen and (min-width: 1440px) {
+
+
+  .contact-panel {
+    .open-hours {
+      position: absolute;
+      top: 60px;
+      left: 32%;
+    }
+  }
 }
