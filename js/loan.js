@@ -75,3 +75,8 @@ $(document).ready(function() {
 		input.val(value);
 	}
 
+$(document).ready(function() {
+
+	$(".calculator").accrue();
+
+});

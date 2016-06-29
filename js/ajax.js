@@ -11,36 +11,42 @@ $(document).ready(function() {
 	// });
 
 
-	$('#warsaw').on('click', function(e) {
+	$('#money-credit').on('click', function(e) {
 		e.preventDefault();
 
-		if($('#load-div').is(':hidden')) {
+		if($('#money-div').is(':hidden')) {
 			console.log('hidden');
-			$('#load-div').show('ease-out');
+			$('#company-div').hide('ease-out');
+			$('#consolidation-div').hide('ease-out');
+			$('#money-div').show('ease-out');
 		} else {
-			$('#load-div').hide('ease-out');
+			$('#money-div').hide('ease-out');
 		}
 	});
 
-		$('#ny').on('click', function(e) {
+		$('#company-credit').on('click', function(e) {
 		e.preventDefault();
 
-		if($('#load-div').is(':hidden')) {
+		if($('#company-div').is(':hidden')) {
 			console.log('hidden');
-			$('#load-div').show('ease-out');
+			$('#money-div').hide('ease-out');
+			$('#consolidation-div').hide('ease-out');
+			$('#company-div').show('ease-out');
 		} else {
-			$('#load-div').hide('ease-out');
+			$('#company-div').hide('ease-out');
 		}
 	});
 
-	$('#london').on('click', function(e) {
+	$('#consolidation-credit').on('click', function(e) {
 		e.preventDefault();
 
-		if($('#load-div').is(':hidden')) {
+		if($('#consolidation-div').is(':hidden')) {
 			console.log('hidden');
-			$('#load-div').show('ease-out');
+			$('#company-div').hide('ease-out');
+			$('#money-div').hide('ease-out');
+			$('#consolidation-div').show('ease-out');
 		} else {
-			$('#load-div').hide('ease-out');
+			$('#consolidation-div').hide('ease-out');
 		}
 	});		
 

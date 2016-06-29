@@ -264,7 +264,7 @@ body {
   width: 3px;
   height: 100%;
   content: "";
-  background-color: #AD0008; }
+  background-color: #FA042D; }
 
 .outer-nav a:after {
   padding: 0 0.2em 0 0.5em;
@@ -287,9 +287,11 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin: 0 0 0 5%;
-  height: 100%; }
+  height: 100%;
+  font-size: 3em; }
 
-.about {
+/**** NOT TRANSPARENT MENU ******/
+.dark-menu {
   background: rgba(34, 34, 34, 0.9); }
 
 .nav-fixed {
@@ -382,8 +384,8 @@ body {
         transition: all .4s ease; }
   .contact-right .open-hours {
     position: absolute;
-    top: 58px;
-    left: 35%; }
+    top: 95px;
+    left: 3%; }
     .contact-right .open-hours .open {
       width: 12px;
       height: 12px;
@@ -400,15 +402,6 @@ body {
     background: #FA042D; }
 
 /**** CONTACT RIGHT END ****/
-/*.contact-panel-active {
-  position: fixed;
-  display: flex;
-  height: 300px;
-  background: #fafafa;
-  top: 100px;
-  left: 0;
-  transition: all .5s ease-out;
-}*/
 /**************
    MAIN CONTENT
 **************/
@@ -420,13 +413,13 @@ body {
   width: 100%; }
   .main-content .main-text {
     width: 75%;
-    padding-bottom: 100px;
+    padding-bottom: 5%;
     margin: 0 auto; }
   .main-content .left-text,
   .main-content .middle-text,
   .main-content .right-text {
     padding: 50px;
-    line-height: 1.7em;
+    line-height: 2em;
     letter-spacing: 2px; }
 
 /************
@@ -443,8 +436,8 @@ body {
   .offer .insurance,
   .offer .property {
     padding: 0 18px 18px;
-    height: 343px;
-    width: 315px; }
+    height: 361px;
+    width: 371px; }
     .offer .credit figure,
     .offer .loan figure,
     .offer .insurance figure,
@@ -654,7 +647,7 @@ figure.snip1477.hover figcaption {
 /*total time needed for full animation*/
 .promo {
   margin: 0;
-  padding-top: 10%;
+  padding-top: 5%;
   width: 100%;
   min-height: 80vh;
   overflow-x: hidden;
@@ -782,11 +775,17 @@ footer {
 ****************/
 @media screen and (max-height: 800px) {
   .main-content {
-    padding: 0 0 20%; } }
+    padding: 0 0 10%; } }
 @media screen and (min-width: 1440px) {
   .contact-panel .open-hours {
     position: absolute;
     top: 60px;
     left: 32%; } }
+@media screen and (max-width: 1280px) {
+  .contact-info p {
+    font-size: 1.5em; } }
+@media screen and (min-width: 1440px) {
+  .offer .property {
+    margin-top: 20px; } }
 
 /*# sourceMappingURL=style.css.map */
