@@ -412,11 +412,12 @@ body {
   flex: 1;
   width: 100%; }
   .main-content .main-text {
-    width: 75%;
+    width: 100%;
     padding: 3% 0;
     margin: 0 auto;
     text-align: center;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    background: #fff; }
   .main-content .left-text,
   .main-content .middle-text,
   .main-content .right-text {
@@ -454,6 +455,10 @@ body {
       padding: 0; }
   .offer .property {
     width: 50%; }
+  .offer .leasing,
+  .offer .factoring {
+    width: 550px;
+    height: 361px; }
 
 .row {
   margin: 0;
@@ -506,8 +511,9 @@ figure.snip1477 img {
 figure.snip1477 .title {
   font-weight: bold;
   position: absolute;
-  top: 9%;
-  left: 4%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 5px 10px 10px; }
 
 figure.snip1477 .title:before,
@@ -640,6 +646,77 @@ figure.snip1477.hover figcaption {
       padding: 0 10px;
       margin: 0 40px; }
 
+/*********************
+  SONER INTRO BANNER
+*********************/
+.soner-intro {
+  width: 100%;
+  min-height: 65vh;
+  margin: 8% 0 0;
+  background: linear-gradient(rgba(11, 125, 173, 0.7), rgba(11, 125, 173, 0.7)), url(../images/p1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff; }
+  .soner-intro h3 {
+    text-transform: uppercase;
+    font-size: 5em;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    line-height: 1.8; }
+  .soner-intro p {
+    font-size: 2em;
+    margin-top: 0; }
+    .soner-intro p:first-child {
+      margin-bottom: 1em; }
+  .soner-intro .intro-more-btn {
+    width: 220px;
+    height: 80px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: rgba(11, 125, 173, 0.7);
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    transition: background .5s ease; }
+    .soner-intro .intro-more-btn:hover {
+      background: #085373; }
+    .soner-intro .intro-more-btn a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center; }
+
+/*******************
+  PARTNERS SECTION
+********************/
+.partner-container {
+  min-height: 60vh;
+  width: 100%;
+  background: #fafafa;
+  display: flex;
+  padding: 50px 0; }
+  .partner-container .partners {
+    width: 70%;
+    height: 360px;
+    background: url("../images/partner_tile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    display: flex;
+    transition: background 1s ease; }
+    .partner-container .partners:hover {
+      background: linear-gradient(rgba(11, 125, 173, 0.7), rgba(11, 125, 173, 0.7)), url("../images/partner_tile.jpg");
+      background-position: center; }
+    .partner-container .partners h3 {
+      margin: auto;
+      color: #fff;
+      font-size: 3em; }
+
 /***************
    PROMO SECTION
    CAROUSEL
@@ -722,6 +799,27 @@ img:nth-child(3) {
     height: 80px;
     border-radius: 3px; }
 
+/****************
+HELP SECTION
+****************/
+.help {
+  width: 100%;
+  min-height: 50vh;
+  background: skyblue;
+  padding: 25px 0;
+  display: flex;
+  justify-content: center;
+  font-size: 4em; }
+  .help .help-phone {
+    font-size: .5em;
+    display: flex;
+    align-items: center; }
+
+.bottom-div {
+  width: 100%;
+  height: 150px;
+  background: #fff; }
+
 /********
    FOOTER
 *********/
@@ -777,7 +875,7 @@ footer {
 ****************/
 @media screen and (max-height: 800px) {
   .main-content {
-    padding: 0 0 10%; } }
+    padding: 0 0; } }
 @media screen and (min-width: 1440px) {
   .contact-panel .open-hours {
     position: absolute;
