@@ -62,11 +62,6 @@
 
 
 
-
-
-
-
-
 	   // PAGE TRANSITIONS
 
 	   window.addEventListener("beforeunload", function () {
@@ -139,6 +134,17 @@
 
 
 
+// HIDE CONTACT ON CLICK
+
+// $('html').click(function() {
+//   if($('.contact-panel')is(':visible')) {
+//   	$('.contact-panel').hide('slow');
+//   }
+// });
+
+// $('.outer-nav').click(function(event){
+//     event.stopPropagation();
+// });
 
 
 

@@ -132,16 +132,16 @@
         mode: "basic",
         operation: "keyup",
         default_values: {
-            amount: "$7,500",
+            amount: "5000",
             rate: "7%",
             rate_compare: "1.49%",
             term: "36m"
         },
         field_titles: {
-            amount: "Loan Amount",
-            rate: "Rate (APR)",
+            amount: "Kwota pożyczki",
+            rate: "Oprocentowanie",
             rate_compare: "Comparison Rate",
-            term: "Term"
+            term: "Okres spłaty"
         },
         button_label: "Calculate",
         field_comments: {
