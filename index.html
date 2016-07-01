@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Kredyty</title>
+   <title>Centrum Biznesowe</title>
 
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -17,6 +17,7 @@
    <link rel="stylesheet" href="css/slick-theme.css">
    <link rel="stylesheet" href="css/ion.rangeSlider.css">
    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css">
+   <link rel="stylesheet" href="css/animate.css">
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -43,7 +44,7 @@
   
       </nav>
 
-      <div class="contact-panel row">
+      <div class="contact-panel row" id="show-panel">
 
          
 
@@ -62,15 +63,26 @@
             </div> 
          </div>          
       </div>
+      
+
 
       <div class="banner">
+         <div class="slide-in-text animated slideInRight infinite" id="heading1">
+            <h1>Najszerszy wybór kredytów</h1>
+         </div>
 
+         <div class="slide-in-text animated slideInRight infinite" id="heading2">
+            <h1>Otwieramy dla Ciebie cały świat</h1>
+         </div>
 
-         <div id="maximage">  
+<!--          <div class="slide-in-text heading3">
+            <h1>Z nami możesz wszystko</h1>
+         </div> -->
+
+         <div id="maximage"> 
             <img src="images/p9_filter.jpg" alt="" width="100%" height="100%" />
             <img src="images/p7_filter.jpg" alt="" width="100%" height="100%" />
             <img src="images/p12_filter.jpg" alt="" width="100%" height="100%" />
-
          </div>        
 
          <a class="arrow-wrap" id="btn-scroll" href="#offer-tiles">
@@ -139,7 +151,13 @@
 
                <div class="col-md-6 col-sm-6 property">
                   <figure class="snip1477">
+
+                    <div class="advert">
+                     
+                    </div>
+
                      <img src="images/p14-thumbnail.jpg" alt="nieruchomości" />
+
                     <div class="title">
                       <div>
                         <h2>Nieruchomości</h2>
@@ -164,7 +182,7 @@
             <div class="soner-intro">
                <h3>Centrum biznesowe</h3>
                <p>Z nami możesz wszystko</p>
-               <p>Jesteśmy ogólnopolską siecią doradzców finansowych</p>
+               <p>Jesteśmy ogólnopolską siecią doradców finansowych</p>
 
                <button type="button" class="intro-more-btn"><a href="about.html">Dowiedz się więcej</a></button>
 
@@ -250,7 +268,7 @@
          </div>
       </section>
 
-      <section class="calc">
+      <!-- <section class="calc">
 
          <h3>Kwota, którą pożyczasz</h3>
 
@@ -272,8 +290,8 @@
 
          <!-- <div class="calculator"></div> -->
 
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non officiis dolorum excepturi hic quis voluptatibus neque cum reiciendis ut, autem in laudantium provident maxime assumenda illum, ratione porro eaque voluptatem esse est, earum. Repellendus necessitatibus consequuntur atque voluptas dolores odit explicabo sequi at distinctio. Neque?</p>
-      </section>
+<!--          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non officiis dolorum excepturi hic quis voluptatibus neque cum reiciendis ut, autem in laudantium provident maxime assumenda illum, ratione porro eaque voluptatem esse est, earum. Repellendus necessitatibus consequuntur atque voluptas dolores odit explicabo sequi at distinctio. Neque?</p>
+      </section>  -->
 
   
       <section class="help">
@@ -284,7 +302,6 @@
       </section>
 
       <div class="bottom-div">
-         
       </div>
 
    </div>   <!-- CONTAINER END -->

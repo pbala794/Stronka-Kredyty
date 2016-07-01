@@ -1,3 +1,10 @@
+.credit-banner {
+   min-height: 35vh;
+   background: linear-gradient(#767a7a, ghostwhite);
+}
+
+
+
 .main-content {
    max-width: 80vw;
    min-height: 50vh;
@@ -5,15 +12,18 @@
 
    h2 {
       text-align: center;
-      font-size: 2em;
+      font-size: 2.5em;
+      line-height: 3em;
    }
 }
 
 .credit-container {
-   max-width: 100%;
+   min-width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-wrap: wrap;
+   padding-bottom: 25%;
 }
 
 

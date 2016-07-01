@@ -1,5 +1,6 @@
 (function() {
 
+
 // STICKY NAVIGATION
 
 	$(document).ready(function() {
@@ -49,16 +50,21 @@
 		// SLIDE DOWN CONTACT PANEL
 
 
-		$('#show-contact-info').on('click', function(e) {
-			console.log('contact');
+		document.addEventListener('click', function() {
+		    document.getElementById('show-panel').style.display = 'none';
+		}, false);
 
-			e.preventDefault();
-		 
-			$('.contact-panel').slideToggle('ease-in', function() {
-				if ($(this).is(':visible'))
-        		$(this).css('display','flex');
-			});
-		}); 
+		document.getElementById('show-contact-info').addEventListener('click', function(e) {
+		    var menu = document.getElementById('show-panel');
+		    if(menu.style.display == 'none')
+		        menu.style.display = 'flex';
+		    else
+		        menu.style.display = 'none';
+			    e.preventDefault();
+			    e.stopPropagation();
+			    return false;
+		}, false);
+
 
 
 
@@ -121,31 +127,91 @@
 	});		// $READY END
 
 
+// 	function loopSlideText() {
+
+// 		console.log('interval');
+
+// 		var InAnimationName = 'animated slideInRight',
+// 			outAnimationName = 'animated slideOutLeft',
+// 			animationEnd = 'webkitAnimationEnd, mozAnimationEnd, MSAnimationEnd, oanimationend, animationend';
+
+// 		$('#heading1').addClass(InAnimationName).on(animationEnd, function() {
+// 			$('#heading1').removeClass("animated slideInRight");
+// 			$('#heading1').addClass(outAnimationName);
+// 			console.log('removed class');
+// 		});
 
 
-})();
+// 		$('#heading2').addClass(InAnimationName).on(animationEnd, function() {
+// 			$('#heading2').removeClass('animated slideInRight');
+// 			$('#heading2').addClass(outAnimationName);
+// 		});
+// 	};
+
+// setInterval(loopSlideText, 5000);
+
+
+
+
+})();	// SELF INVOKING FN END
+
+
+
 
 // IMAGE SHOWCASE INIT FUNCTION
 
 	$(function(){
 		// Trigger maximage
-		jQuery('#maximage').maximage();
+		$('#maximage').maximage();
 	});
 
 
 
-// HIDE CONTACT ON CLICK
-
-// $('html').click(function() {
-//   if($('.contact-panel')is(':visible')) {
-//   	$('.contact-panel').hide('slow');
-//   }
-// });
-
-// $('.outer-nav').click(function(event){
-//     event.stopPropagation();
-// });
 
 
 
 
+// TEXT ANIMATION
+
+
+	// var InAnimationName = 'animated slideInRight',
+	// 	outAnimationName = 'animated slideOutLeft',
+	// 	animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+
+	// function animatedTextNext() {
+	// 	$('#heading2').addClass(InAnimationName).delay(6000).queue(function(next) {
+
+	// 			$('#heading2').removeClass(InAnimationName);
+	// 			$('#heading2').addClass(outAnimationName);
+	// 	});
+	// };
+
+
+
+
+
+	// function animatedText(callback) {
+
+	// 	$('#heading1').addClass(InAnimationName).delay(4000).queue(function(next) {
+			
+	// 			$(this).removeClass(InAnimationName);
+	// 			$(this).addClass(outAnimationName);
+	// 			console.log('removed class');
+
+	// 			next();
+			
+	// 	});
+
+
+	//     if (typeof callback !== 'function') {
+	//      callback = false;
+	//     }
+
+	//     if (callback) {
+	//          callback();
+	//     }
+	// };
+
+
+	// animatedText(animatedTextNext);
